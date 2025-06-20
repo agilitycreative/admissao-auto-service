@@ -1,100 +1,98 @@
-import HeroSection from "@/components/HeroSection";
-import PartnerLogos from "@/components/PartnerLogos";
-import AboutUsSection from "@/components/AboutUsSection";
-import ServicesTabs from "@/components/ServicesTabs";
-import ServiceSteps from "@/components/ServiceSteps";
-import LocationsSection from "@/components/LocationsSection";
-import FAQSection from "@/components/FAQSection";
-import ContactSection from "@/components/ContactSection";
 import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { BiSolidZap } from "react-icons/bi";
-import { FaCarSide, FaOilCan, FaTools } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
-import { PiEngineFill } from "react-icons/pi";
+import PartnerLogos from "./PartnerLogos";
+import AboutUsSection from "./AboutUsSection";
+import ServicesTabs from "./ServicesTabs";
+import ServiceSteps from "./ServiceSteps";
+import LocationsSection from "./LocationsSection";
+import FAQSection from "./FAQSection";
+import ContactSection from "./ContactSection";
+import Image from "next/image";
 
-export default function Home() {
+const ServicesSection = (): React.ReactElement => {
+  // Partner logos data
   const partnerLogos = [
-    { id: 1, src: "/images/citroen-logo.png", alt: "Partner Logo 1" },
-    { id: 2, src: "/images/bmw-logo.png", alt: "Partner Logo 2" },
-    { id: 3, src: "/images/peugeot-logo.png", alt: "Partner Logo 3" },
-    { id: 4, src: "/images/audi-logo.png", alt: "Partner Logo 4" },
-    { id: 5, src: "/images/citroen-logo.png", alt: "Partner Logo 5" },
-    { id: 6, src: "/images/bmw-logo.png", alt: "Partner Logo 6" },
-    { id: 7, src: "/images/peugeot-logo.png", alt: "Partner Logo 7" },
-    { id: 8, src: "/images/audi-logo.png", alt: "Partner Logo 8" },
+    { id: 1, src: "", alt: "Partner Logo 1" },
+    { id: 2, src: "", alt: "Partner Logo 2" },
+    { id: 3, src: "", alt: "Partner Logo 3" },
+    { id: 4, src: "", alt: "Partner Logo 4" },
+    { id: 5, src: "", alt: "Partner Logo 5" },
+    { id: 6, src: "", alt: "Partner Logo 6" },
+    { id: 7, src: "", alt: "Partner Logo 7" },
+    { id: 8, src: "", alt: "Partner Logo 8" },
   ];
 
+  // Service categories data
   const serviceCategories = [
     {
       id: "eletrica",
       title: "Elétrica",
       description: "Sistema elétrico completo",
-      icon: <BiSolidZap style={{ fontSize: 30 }} />,
+      icon: <></>,
     },
     {
       id: "suspensao",
       title: "Suspensão",
       description: "Amortecedores e molas novas e originais",
-      icon: <FaCarSide style={{ fontSize: 37.5 }} />,
+      icon: <></>,
     },
     {
       id: "motor",
       title: "Motor",
       description: "Bloco, cabeçote e Injeção eletrônica",
-      icon: <PiEngineFill style={{ fontSize: 35 }} />,
+      icon: <></>,
     },
     {
       id: "troca-oleo",
       title: "Troca de Óleo",
       description: "Óleos e filtros de qualidade",
-      icon: <FaOilCan style={{ fontSize: 37.5 }} />,
+      icon: <></>,
     },
     {
       id: "alinhamento",
       title: "Alinhamento",
       description: "Balanceamento e geometria",
-      icon: <IoMdSettings style={{ fontSize: 30 }} />,
+      icon: <></>,
     },
     {
       id: "outros",
       title: "Outros",
       description: "Consulte para saber mais",
-      icon: <FaTools style={{ fontSize: 30 }} />,
+      icon: <></>,
     },
   ];
 
+  // Service steps data
   const serviceSteps = [
     {
       id: 1,
       title: "Agende sua visita",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <></>,
     },
     {
       id: 2,
       title: "Análise do Veículo",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <></>,
     },
     {
       id: 3,
       title: "Entrega do Orçamento",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <></>,
     },
     {
       id: 4,
       title: "Realização do Serviços",
       subtitle: "Monitore com vídeos",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <></>,
     },
     {
       id: 5,
       title: "Veículo entregue",
       subtitle: "Garantia Admissão",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <></>,
     },
   ];
 
+  // Locations data
   const locations = [
     {
       id: 1,
@@ -103,7 +101,7 @@ export default function Home() {
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
       address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
       phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
+      image: "",
     },
     {
       id: 2,
@@ -112,10 +110,11 @@ export default function Home() {
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
       address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
       phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
+      image: "",
     },
   ];
 
+  // FAQ data
   const faqItems = [
     {
       id: "item-1",
@@ -143,6 +142,7 @@ export default function Home() {
     },
   ];
 
+  // Contact info data
   const contactInfo = [
     {
       id: 1,
@@ -165,19 +165,62 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center w-full gap-20">
-      <Header />
-      <HeroSection />
+    <div className="flex flex-col items-center gap-20 w-full">
       <PartnerLogos partnerLogos={partnerLogos} />
       <AboutUsSection />
       <ServicesTabs serviceCategories={serviceCategories} />
       <ServiceSteps serviceSteps={serviceSteps} />
       <LocationsSection locations={locations} />
-      <FAQSection faqItems={faqItems} />
-      <div className="w-full">
-        <ContactSection contactInfo={contactInfo} />
-        <Footer />
-      </div>
+      <section className="w-full">
+        <div className="max-w-[950px] mx-auto flex gap-32">
+          <FAQSection faqItems={faqItems} />
+          <div className="w-[337px] relative">
+            <div className="w-[369px] h-[436px] relative left-[-29px]">
+              <Image
+                className="w-full h-full object-cover"
+                alt="Service image"
+                src="/service-image.png"
+                width={369}
+                height={436}
+              />
+              <div className="absolute w-[280px] h-[383px] top-6 left-[39px]">
+                <div className="flex items-center gap-[11px] absolute top-0 left-0">
+                  <Image
+                    className="w-[50.24px] h-6"
+                    alt="Logo part 1"
+                    src="/logo1.png"
+                    width={50}
+                    height={24}
+                  />
+                  <Image
+                    className="w-[100.01px] h-[24.71px]"
+                    alt="Logo part 2"
+                    src="/logo2.png"
+                    width={100}
+                    height={25}
+                  />
+                </div>
+                <h3 className="absolute w-[278px] top-[251px] left-0 font-['Roboto-ExtraBold'] font-extrabold text-white text-2xl leading-10">
+                  Diagnóstico, Análise e Manutenção
+                </h3>
+                <button className="absolute top-[346px] left-0 flex items-center justify-center gap-2.5 rounded-[100px] border border-white bg-transparent text-white px-5 py-2">
+                  ENTRAR EM CONTATO
+                  <Image
+                    className="w-[18px] h-[18.01px]"
+                    alt="WhatsApp icon"
+                    src="/whatsapp.png"
+                    width={18}
+                    height={18}
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ContactSection contactInfo={contactInfo} />
     </div>
   );
-}
+};
+
+export default ServicesSection;
