@@ -4,14 +4,13 @@ import { FaRegClock } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { FiMessageCircle } from "react-icons/fi";
 
-
-
 import React from "react";
+import { cn } from "@/lib/utils";
 
 const HeroSection: React.FC = () => {
   return (
     <div className=" w-full h-[686px]">
-      <div className="w-full h-[686px] top-0 left-0 bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%]">
+      <div className="w-full h-[686px] top-0 left-0 bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
         <div className="absolute w-[494px] h-[215px] top-56 left-[243px]">
           <h1 className="absolute w-[424px] top-0 left-0 [font-family:'Montserrat-ExtraBold',Helvetica] font-extrabold text-white text-[32px] tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
@@ -30,8 +29,8 @@ const HeroSection: React.FC = () => {
           </Button>
         </div>
 
-        <Card className="w-full items-center justify-center gap-2.5 px-5 py-10 absolute top-[551px] left-0 bg-[#00000080] border-none rounded-none">
-          <CardContent className="flex w-[952px] items-center gap-20 p-0">
+        <Card className="bg-[#00000080] w-full items-center justify-center gap-2.5 px-5 py-10 absolute bottom-0 left-0 border-none rounded-none">
+          <CardContent className="flex w-full max-w-[952px] mx-auto items-center gap-8 md:gap-20 p-0">
             <div className="inline-flex items-center gap-5 relative flex-[0_0_auto]">
               <FaRegClock style={{ fontSize: 24, color: "white" }} />
               <div className="relative w-[195px] h-[51px] mr-[-4.00px]">
@@ -49,7 +48,7 @@ const HeroSection: React.FC = () => {
 
             <div className="inline-flex items-center gap-5 relative flex-[0_0_auto]">
               <GoHome style={{ fontSize: 24, color: "white" }} />
-              <div className="gap-10 relative flex-[0_0_auto] inline-flex items-start">
+              <div className="gap-10  relative flex-[0_0_auto] inline-flex items-start">
                 <div className="relative w-[235px] h-[55px]">
                   <h3 className="absolute top-0 left-0 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-white text-sm tracking-[0] leading-[normal]">
                     Cidade dos Funcionários

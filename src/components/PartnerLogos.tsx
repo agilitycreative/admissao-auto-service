@@ -12,7 +12,7 @@ interface PartnerLogosProps {
 }
 
 const PartnerLogos: React.FC<PartnerLogosProps> = ({ partnerLogos }) => (
-  <div className="inline-flex items-center gap-[83px] pt-[61px] pb-1 opacity-40">
+  <div className="inline-flex items-center gap-[83px] opacity-40">
     {partnerLogos.map((logo) => (
       <Image
         key={logo.id}

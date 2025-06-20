@@ -2,15 +2,40 @@ import React from "react";
 import { IoCarSportOutline } from "react-icons/io5";
 import { TbCalendarTime } from "react-icons/tb";
 import { PiEngineLight } from "react-icons/pi";
+import Image from "next/image";
 
 const AboutUsSection = () => (
   <section className="flex flex-col w-full max-w-[954px] items-start gap-[70px] py-2.5">
     <div className="flex w-full">
       <div className="flex flex-col gap-[18px] w-[403px]">
-        <div className="w-full h-[213px] shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] bg-[url(/images/about-us-long-img.png)] bg-cover bg-center" />
+        <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
+          <Image
+            src="/images/about-us-long-img.png"
+            alt="Sobre nós"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="flex gap-2.5">
-          <div className="w-[197px] h-[187px] shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] bg-[url(/images/about-us-short-img-1.png)] bg-cover bg-center" />
-          <div className="w-[197px] h-[187px] shadow-[0px_10px_15px_#0000001a,0px_4px_6px_#0000001a] bg-[url(/images/about-us-short-img-2.png)] bg-cover bg-center" />
+          <div className="w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
+            <Image
+              src="/images/about-us-short-img-1.png"
+              alt="Sobre nós 1"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
+            <Image
+              src="/images/about-us-short-img-2.png"
+              alt="Sobre nós 2"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
       <div className="flex flex-col w-[500px] items-start gap-[30px] ml-[51px]">
