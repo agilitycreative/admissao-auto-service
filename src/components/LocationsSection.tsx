@@ -1,6 +1,9 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 
 type Location = {
   id: number;
@@ -44,23 +47,11 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
               </h3>
               <p className="text-white text-sm">{location.description}</p>
               <div className="flex items-start gap-[13px]">
-                <Image
-                  className="w-[15px] h-5"
-                  alt="Location icon"
-                  src="/location.png"
-                  width={15}
-                  height={20}
-                />
+                <FaMapMarkerAlt className="w-4 h-5 text-white"/>
                 <p className="text-white text-sm">{location.address}</p>
               </div>
               <div className="flex items-start gap-[13px]">
-                <Image
-                  className="w-[15px] h-5"
-                  alt="Phone icon"
-                  src="/phone.png"
-                  width={15}
-                  height={20}
-                />
+                <BsFillTelephoneFill className="w-4 h-5 text-white"/>
                 <p className="text-white text-sm">{location.phone}</p>
               </div>
             </CardContent>
