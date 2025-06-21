@@ -11,8 +11,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BiSolidZap } from "react-icons/bi";
 import { FaCarSide, FaOilCan, FaTools } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
+import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
+import { LuHouse } from "react-icons/lu";
 
 export default function Home() {
   const partnerLogos = [
@@ -69,29 +70,29 @@ export default function Home() {
     {
       id: 1,
       title: "Agende sua visita",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <FaCarSide className="w-7 h-5" />,
     },
     {
       id: 2,
       title: "Análise do Veículo",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <FaCarSide className="w-7 h-5" />,
     },
     {
       id: 3,
       title: "Entrega do Orçamento",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <FaCarSide className="w-7 h-5" />,
     },
     {
       id: 4,
       title: "Realização do Serviços",
       subtitle: "Monitore com vídeos",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <FaCarSide className="w-7 h-5" />,
     },
     {
       id: 5,
       title: "Veículo entregue",
       subtitle: "Garantia Admissão",
-      icon: <FaCarSide className="w-7 h-5"/>,
+      icon: <FaCarSide className="w-7 h-5" />,
     },
   ];
 
@@ -148,19 +149,19 @@ export default function Home() {
       id: 1,
       title: "Horário de funcionamento",
       details: "Segunda - Sexta\n08:30 as 18:00",
-      icon: <></>,
+      icon: <IoMdTime className="size-6" />,
     },
     {
       id: 2,
       title: "Cidade dos Funcionários",
       details: "Av. Desembargador Gonzaga, 158\n(85) 9 9609-3955",
-      icon: <></>,
+      icon: <LuHouse className="size-6" />,
     },
     {
       id: 3,
       title: "Sapiranga",
       details: "Av. Presidente Arthur Bernardes, 2116\n(85) 9 9609-3955",
-      icon: <></>,
+      icon: <LuHouse className="size-6" />,
     },
   ];
 

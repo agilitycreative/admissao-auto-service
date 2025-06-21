@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import Button from "./ui/button";
 
 type FAQItem = {
   id: string;
@@ -52,31 +53,27 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
       </Accordion>
     </div>
     <div
-      className="relative  bg-cover bg-center bg-no-repeat flex flex-col justify-between"
+      className="relative bg-cover bg-center bg-no-repeat flex flex-col md:h-[436px] justify-between"
       style={{ backgroundImage: "url('/images/faq-img.png')" }}
     >
-      <div className="absolute inset-0 bg-black/50 z-0" />
-      <div className="relative z-10 p-6">
+      <div className="inset-0 bg-black/50 z-5 absolute w-full h-full" />
+      <div className="z-10 p-6">
         <Image
           src="/images/logo-marca-white.png"
           alt="Logo Admissão Auto Service"
           width={162}
           height={24}
-          className="w-48 md:w-56"
+          className="h-auto w-40"
         />
       </div>
-      <div className="relative z-10 text-white text-center px-6 pb-16">
-        <h1 className="text-2xl font-bold mb-6">
+      <div className="z-10 text-white flex-col items-start text-start px-6 pb-4">
+        <h1 className="text-2xl font-extrabold mb-6 text-start">
           Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
         </h1>
-        <a
-          href="https://wa.me/seunumero"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex text-sm items-center font-semibold gap-2 border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition"
-        >
-          ENTRAR EM CONTATO <FaWhatsapp size={18} />
-        </a>
+        <Button className="flex items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-white w-auto">
+          ENVIAR MENSAGEM
+          <FaWhatsapp style={{ fontSize: 18 }} />
+        </Button>
       </div>
     </div>
   </div>
