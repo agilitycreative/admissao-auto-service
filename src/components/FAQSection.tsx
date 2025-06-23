@@ -21,7 +21,7 @@ interface FAQSectionProps {
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
   <div className="flex gap-20 justify-between max-w-[956px] w-full">
-    <div className="flex-1 flex flex-col gap-12">
+    <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
         <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
           PERGUNTAS FREQUENTES

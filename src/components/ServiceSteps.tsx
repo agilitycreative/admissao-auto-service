@@ -13,10 +13,17 @@ interface ServiceStepsProps {
 }
 
 const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
-  <section className="w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.94)_100%),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] py-[90px]">
-    <div className="max-w-[954px] mx-auto">
+  <div className="w-full relative bg-[linear-gradient(0deg,rgba(0,0,0,0.87)_0%,rgba(0,0,0,0.94)_100%),url('/images/steps-bg.jpg'),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] bg-cover bg-center bg-no-repeat py-[90px]">
+    <Image
+      src={"/images/vector.svg"}
+      alt="admissao vector"
+      width={420}
+      height={206}
+      className="absolute right-40 top-10 z-50 brightness-200 opacity-100 mix-blend-screen"
+    />
+    <div className="max-w-[954px] mx-auto ">
       <div className="flex flex-col gap-7">
-        <div>
+        <div className="relative">
           <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary-contrast text-[32px] leading-10">
             ETAPAS DO ATENDIMENTO
           </h2>
@@ -24,7 +31,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
-        <div className="flex items-center gap-5 w-full">
+        <div className="flex items-center gap-5 w-full ">
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
               <div className="flex flex-col items-center gap-3 flex-1">
@@ -53,7 +60,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
         </div>
       </div>
     </div>
-  </section>
+  </div>
 );
 
 export default ServiceSteps;

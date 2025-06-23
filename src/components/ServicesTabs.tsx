@@ -56,7 +56,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                   <TabsTrigger
                     key={category.id}
                     value={category.id}
-                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 rounded-none`}
+                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 h-[184px] rounded-none`}
                   >
                     <div className="flex flex-col items-center">
                       <div
@@ -68,7 +68,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                         {category.title}
                       </div>
                     </div>
-                    <div className="font-['Roboto-Regular'] font-normal text-[#3c3c3cc3] text-sm text-center">
+                    <div className="font-['Roboto-Regular'] font-normal text-[#3c3c3cc3] text-sm text-center line-clamp-3">
                       {category.description}
                     </div>
                   </TabsTrigger>
