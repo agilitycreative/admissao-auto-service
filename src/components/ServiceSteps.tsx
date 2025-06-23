@@ -13,7 +13,7 @@ interface ServiceStepsProps {
 }
 
 const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
-  <div className="-mx-4 w-[100vw] max-w-none relative bg-[linear-gradient(0deg,rgba(0,0,0,0.87)_0%,rgba(0,0,0,0.94)_100%),url('/images/steps-bg.jpg'),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] bg-cover bg-center bg-no-repeat pt-4 pb-12 md:py-[90px]">
+  <div className="-mx-4 w-[100vw] max-w-none relative bg-[linear-gradient(0deg,rgba(0,0,0,0.87)_0%,rgba(0,0,0,0.94)_100%),url('/images/steps-bg.jpg'),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] bg-cover bg-center bg-no-repeat pt-4 pb-12 md:py-24">
     <Image
       src={"/images/vector.svg"}
       alt="admissao vector"
@@ -27,21 +27,21 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
           <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary-contrast text-2xl md:text-3xl leading-10">
             ETAPAS DO ATENDIMENTO
           </h2>
-          <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm tracking-[0.25px] leading-5">
+          <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm tracking-wide leading-5">
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
-        <div className="flex flex-wrap items-center justify-center w-full gap-[10px] md:gap-5">
+        <div className="flex flex-wrap items-center justify-center w-full gap-2 md:gap-5">
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
               <div className="flex flex-col items-center gap-3 w-full min-w-[120px] max-w-[150px]">
                 <div className="flex items-center justify-center text-[#393939]">
                   {step.icon}
                 </div>
-                <div className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-xs text-center tracking-[0.25px] leading-5">
+                <div className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-xs text-center tracking-wide leading-5">
                   {step.title}
                   <br />
-                  <span className="font-light italic text-[11px] block h-[16px]">
+                  <span className="font-light italic text-xs block h-4">
                     {step.subtitle || "\u00A0"}
                   </span>
                 </div>

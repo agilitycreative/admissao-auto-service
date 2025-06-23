@@ -38,7 +38,7 @@ const AboutUsSection = () => (
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full md:w-[500px] items-start gap-7 md:ml-[51px] order-1 md:order-2">
+      <div className="flex flex-col w-full md:w-[500px] items-start gap-7 md:ml-12 order-1 md:order-2">
         <div className="flex flex-col gap-2.5 relative ">
           <Image
             src={"/images/vector.svg"}
@@ -67,11 +67,11 @@ const AboutUsSection = () => (
           <div className="flex gap-5 w-full justify-between">
             <div className="flex items-center justify-center gap-5 flex-1">
               <TbCalendarTime style={{ fontSize: 26 }} />
-              <div className="flex flex-col gap-px">
+              <div className="flex flex-col gap-0">
                 <div className="text-shadow-sm font-['Montserrat-Regular'] font-normal text-black text-4xl tracking-[0.25px] leading-5">
                   16
                 </div>
-                <div className="font-['Mulish-Regular'] pt-1  font-normal text-primary text-sm tracking-[0.25px] leading-5">
+                <div className="font-['Mulish-Regular'] pt-2 font-normal text-primary text-sm tracking-[0.25px] leading-5">
                   anos de experiência
                 </div>
               </div>

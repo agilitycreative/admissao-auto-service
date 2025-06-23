@@ -26,7 +26,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
         <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
           PERGUNTAS FREQUENTES
         </h2>
-        <p className="font-['Montserrat-Regular'] text-primary tracking-[0.40px] text-sm w-full">
+        <p className="font-['Montserrat-Regular'] text-primary tracking-wider text-sm w-full">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis

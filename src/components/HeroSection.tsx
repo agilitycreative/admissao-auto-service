@@ -12,17 +12,17 @@ const HeroSection: React.FC = () => {
       <div className="w-full h-[686px] flex flex-col justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
         <div className="bg-transparent w-full h-20"> </div>
         <div className="mx-auto p-4 items-start w-full max-w-[950px] flex flex-col gap-6">
-          <h1 className="w-full mt-26 md:mt-0 max-w-[424px] text-center md:text-left [font-family:'Montserrat-ExtraBold',Helvetica] font-extrabold text-primary-contrast text-2xl md:text-3xl tracking-[0] leading-[normal]">
+          <h1 className="w-full mt-4 md:mt-0 max-w-[424px] text-center md:text-left [font-family:'Montserrat-ExtraBold',Helvetica] font-extrabold text-primary-contrast text-2xl md:text-3xl tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
           </h1>
 
-          <p className="max-w-[490px] text-center md:text-left [font-family:'Montserrat-Medium',Helvetica] font-medium text-primary-contrast text-sm tracking-[0] leading-[normal]">
+          <p className="max-w-[490px] text-center md:text-left [font-family:'Montserrat-Medium',Helvetica] font-medium text-primary-contrast text-sm tracking-normal leading-normal">
             Especialistas em manutenção automotiva com mais de 15 anos de
             experiência. Qualidade, confiança e atendimento personalizado.
           </p>
 
-          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-[15px] bg-accent-green rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-[-0.50px] [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-primary-contrast text-sm tracking-[0] leading-[normal]">
+          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-green rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
+            <span className="relative w-fit mt-0 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-primary-contrast text-sm tracking-normal leading-normal">
               ENTRAR EM CONTATO
             </span>
             <FaWhatsapp style={{ fontSize: 18, color: "white" }} />
