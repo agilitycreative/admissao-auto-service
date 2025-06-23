@@ -17,10 +17,10 @@ interface ServicesTabsProps {
 const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
   const iconPositions = [
     { top: "28%", left: "23.14%" },
-    { top: "70%", left: "50%" },
+    { top: "50%", left: "50%" },
     { top: "40%", left: "14%" },
     { top: "30%", left: "6%" },
-    { top: "60%", left: "30%" },
+    { top: "50%", left: "30%" },
     { top: "40%", left: "40.10%" },
   ];
 
@@ -81,7 +81,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                 className="flex flex-col items-center justify-center rounded-[0px_0px_10px_10px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_0%,rgba(221,221,221,1)_100%)]"
               >
                 <div className="w-full max-w-[954px] max-h-[330px] mx-auto">
-                  <div className="w-full h-[200px] sm:h-[250px] md:h-[330px] bg-[url(/images/car-services.png)] bg-cover bg-center relative">
+                  <div className="w-full h-[200px] sm:h-[250px] md:h-[330px] bg-[url(/images/car-services.png)] bg-contain bg-center bg-no-repeat relative">
                     {serviceCategories.map((cat, idx) => {
                       const isActive = cat.id === category.id;
                       const pos = iconPositions[idx] || {
@@ -96,7 +96,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                             top: pos.top,
                             left: pos.left,
                           }}
-                          className={`w-8 h-8 md:h-10 md:w-10 flex items-center justify-center p-2.5 rounded-full transition
+                          className={`w-8 h-8 md:h-10 md:w-10 flex items-center justify-center p-1.5 md:p-2.5 rounded-full transition
                             ${
                               isActive
                                 ? "bg-white text-black shadow-lg"
