@@ -26,7 +26,7 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
           alt="admissao vector"
           width={420}
           height={206}
-          className="absolute -left-72 -top-4"
+          className="absolute overflow-hidden -left-40 md:-left-72 -top-4"
         />
 
         <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
@@ -38,9 +38,9 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
           Guararapes.
         </p>
       </div>
-      <div className="flex gap-12 w-full">
+      <div className="flex flex-wrap gap-12 w-full">
         {locations.map((location) => (
-          <Card key={location.id} className="flex-1 rounded-lg overflow-hidden">
+          <Card key={location.id} className="md:flex-1 w-full rounded-lg overflow-hidden">
             <Image
               className="w-full h-[210px] object-cover"
               alt={location.name}

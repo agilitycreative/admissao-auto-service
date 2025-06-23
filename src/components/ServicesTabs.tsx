@@ -15,14 +15,13 @@ interface ServicesTabsProps {
 }
 
 const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
-  // Adicione um array de posições para os ícones (exemplo fixo)
   const iconPositions = [
-    { top: "160px", left: "240px" },
-    { top: "170px", left: "595px" },
-    { top: "123px", left: "173px" },
-    { top: "100px", left: "49px" },
-    { top: "113px", left: "98px" },
-    { top: "130px", left: "349px" },
+    { top: "28%", left: "23.14%" },
+    { top: "70%", left: "50%" },
+    { top: "40%", left: "14%" },
+    { top: "30%", left: "6%" },
+    { top: "60%", left: "30%" },
+    { top: "40%", left: "40.10%" },
   ];
 
   return (
@@ -37,7 +36,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
               height={206}
               className="absolute -left-72 -top-4"
             />
-            <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary text-[32px] leading-10">
+            <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary text-3xl leading-10">
               SERVIÇOS ADMISSÃO
             </h2>
             <p className="font-['Montserrat-Regular'] font-normal text-primary text-sm tracking-[0.25px] leading-5 max-w-[590px] mt-1.5">
@@ -50,7 +49,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
         </div>
         <Card className="w-full shadow-[0px_0px_40.5px_#00000008] rounded-[10px]">
           <Tabs defaultValue={serviceCategories[0].id}>
-            <TabsList className="w-full h-auto rounded-[10px_10px_0px_0px] bg-primary-contrast p-0 flex">
+            <TabsList className="w-full h-auto rounded-[10px_10px_0px_0px] overflow-x-auto bg-primary-contrast p-0 flex">
               {serviceCategories.map((category) => {
                 return (
                   <TabsTrigger
@@ -60,7 +59,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                   >
                     <div className="flex flex-col items-center">
                       <div
-                        className={`h-[35px] w-[35px] flex items-center justify-center rounded-full transition`}
+                        className={`h-8 w-8 flex items-center justify-center rounded-full transition`}
                       >
                         {category.icon}
                       </div>
@@ -79,35 +78,37 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
               <TabsContent
                 key={category.id}
                 value={category.id}
-                className="flex flex-col items-center justify-center p-[50px] rounded-[0px_0px_10px_10px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_0%,rgba(221,221,221,1)_100%)]"
+                className="flex flex-col items-center justify-center rounded-[0px_0px_10px_10px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_0%,rgba(221,221,221,1)_100%)]"
               >
-                <div className="w-full h-[330px] bg-[url(/images/car-services.png)] bg-cover bg-center relative">
-                  {serviceCategories.map((cat, idx) => {
-                    const isActive = cat.id === category.id;
-                    const pos = iconPositions[idx] || {
-                      top: "0px",
-                      left: "0px",
-                    };
-                    return (
-                      <div
-                        key={cat.id}
-                        style={{
-                          position: "absolute",
-                          top: pos.top,
-                          left: pos.left,
-                        }}
-                        className={`w-11 h-[42px] flex items-center justify-center p-2.5 rounded-full transition
-                          ${
-                            isActive
-                              ? "bg-white text-black shadow-lg"
-                              : "bg-black text-white"
-                          }
-                        `}
-                      >
-                        {cat.icon}
-                      </div>
-                    );
-                  })}
+                <div className="w-full max-w-[954px] max-h-[330px] mx-auto">
+                  <div className="w-full h-[200px] sm:h-[250px] md:h-[330px] bg-[url(/images/car-services.png)] bg-cover bg-center relative">
+                    {serviceCategories.map((cat, idx) => {
+                      const isActive = cat.id === category.id;
+                      const pos = iconPositions[idx] || {
+                        top: "0px",
+                        left: "0px",
+                      };
+                      return (
+                        <div
+                          key={cat.id}
+                          style={{
+                            position: "absolute",
+                            top: pos.top,
+                            left: pos.left,
+                          }}
+                          className={`w-8 h-8 md:h-10 md:w-10 flex items-center justify-center p-2.5 rounded-full transition
+                            ${
+                              isActive
+                                ? "bg-white text-black shadow-lg"
+                                : "bg-black text-white"
+                            }
+                          `}
+                        >
+                          {cat.icon}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </TabsContent>
             ))}

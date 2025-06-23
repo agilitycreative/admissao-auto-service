@@ -20,7 +20,7 @@ interface FAQSectionProps {
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
-  <div className="flex gap-20 justify-between max-w-[956px] w-full">
+  <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] w-full">
     <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
         <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
@@ -53,7 +53,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
       </Accordion>
     </div>
     <div
-      className="relative bg-cover rounded-md bg-center bg-no-repeat flex flex-col md:h-[436px] justify-between"
+      className="relative bg-cover rounded-md bg-center bg-no-repeat flex flex-col h-[436px] md:h-[436px] justify-between order-1 md:order-2"
       style={{ backgroundImage: "url('/images/faq-img.png')" }}
     >
       <div className="inset-0 bg-black/50 rounded-md z-5 absolute w-full h-full" />
@@ -66,7 +66,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
           className="h-auto w-40"
         />
       </div>
-      <div className="z-10 text-primary-contrast flex-col items-start text-start px-6 pb-4">
+      <div className="z-10 text-primary-contrast flex-col items-start text-start px-6 pb-8">
         <h1 className="text-2xl font-extrabold mb-6 text-start">
           Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
         </h1>

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const AboutUsSection = () => (
   <section className="flex flex-col w-full max-w-[954px] items-start gap-y-16 py-2.5">
-    <div className="flex w-full">
-      <div className="flex flex-col gap-4 w-[403px]">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+      <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
         <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
           <Image
             src="/images/about-us-long-img.png"
@@ -18,7 +18,7 @@ const AboutUsSection = () => (
           />
         </div>
         <div className="flex gap-2.5">
-          <div className="w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
+          <div className="flex-1 w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
             <Image
               src="/images/about-us-short-img-1.png"
               alt="Sobre nós 1"
@@ -27,7 +27,7 @@ const AboutUsSection = () => (
               priority
             />
           </div>
-          <div className="w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
+          <div className="flex-1 w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
             <Image
               src="/images/about-us-short-img-2.png"
               alt="Sobre nós 2"
@@ -38,16 +38,16 @@ const AboutUsSection = () => (
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-[500px] items-start gap-7 ml-[51px]">
-        <div className="flex flex-col gap-2.5 relative">
+      <div className="flex flex-col w-full md:w-[500px] items-start gap-7 md:ml-[51px] order-1 md:order-2">
+        <div className="flex flex-col gap-2.5 relative ">
           <Image
             src={"/images/vector.svg"}
             alt="admissao vector"
             width={420}
             height={206}
-            className="absolute -left-60 -top-10"
+            className="absolute -left-32 md:-left-60 -top-10"
           />
-          <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary text-[32px] leading-10">
+          <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary text-3xl leading-10">
             QUEM SOMOS
           </h2>
           <p className="font-['Mulish-Regular'] text-primary tracking-[0.25px] leading-5 text-sm">
