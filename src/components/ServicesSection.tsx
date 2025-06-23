@@ -184,7 +184,7 @@ const ServicesSection = (): React.ReactElement => {
                 height={436}
               />
               <div className="absolute w-[280px] h-[383px] top-6 left-[39px]">
-                <div className="flex items-center gap-[11px] absolute top-0 left-0">
+                <div className="flex items-center gap-2.5 absolute top-0 left-0">
                   <Image
                     className="w-[50.24px] h-6"
                     alt="Logo part 1"
@@ -200,10 +200,10 @@ const ServicesSection = (): React.ReactElement => {
                     height={25}
                   />
                 </div>
-                <h3 className="absolute w-[278px] top-[251px] left-0 font-['Roboto-ExtraBold'] font-extrabold text-white text-2xl leading-10">
+                <h3 className="absolute w-[278px] top-[251px] left-0 font-['Roboto-ExtraBold'] font-extrabold text-primary-contrast text-2xl leading-10">
                   Diagnóstico, Análise e Manutenção
                 </h3>
-                <button className="absolute top-[346px] left-0 flex items-center justify-center gap-2.5 rounded-[100px] border border-white bg-transparent text-white px-5 py-2">
+                <button className="absolute top-[346px] left-0 flex items-center justify-center gap-2.5 rounded-[100px] border border-white bg-transparent text-primary-contrast px-5 py-2">
                   ENTRAR EM CONTATO
                   <Image
                     className="w-[18px] h-[18.01px]"

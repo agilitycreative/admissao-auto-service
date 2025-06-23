@@ -23,7 +23,7 @@ const Frame = (): React.ReactElement => {
 
   return (
     <div className="mt-6 fixed z-50 flex w-[954px] justify-between p-5 bg-[#000000c2] rounded-[500px] items-center">
-      <div className="inline-flex items-center gap-[11px]">
+      <div className="inline-flex items-center gap-3">
         <Image
           className="w-[161px] h-6"
           alt="Admissão logo symbol"
@@ -36,7 +36,7 @@ const Frame = (): React.ReactElement => {
       <div className="inline-flex gap-10 items-center">
         {navItems.map((item, index) => (
           <div key={`nav-item-${index}`}>
-            <div className="font-semibold text-white text-sm [font-family:'Montserrat-SemiBold',Helvetica]">
+            <div className="font-semibold text-primary-contrast text-sm [font-family:'Montserrat-SemiBold',Helvetica]">
               {item.name}
             </div>
           </div>

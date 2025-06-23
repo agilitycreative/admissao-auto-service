@@ -21,12 +21,12 @@ interface FAQSectionProps {
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
   <div className="flex gap-20 justify-between max-w-[956px] w-full">
-    <div className="flex-1 flex flex-col gap-[50px]">
-      <div className="flex flex-col gap-[13px]">
-        <h2 className="font-['Montserrat-Bold'] font-bold text-neutral-800 text-2xl leading-10">
+    <div className="flex-1 flex flex-col gap-12">
+      <div className="flex flex-col gap-2">
+        <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
           PERGUNTAS FREQUENTES
         </h2>
-        <p className="font-['Montserrat-Regular'] text-neutral-800 tracking-[0.40px] text-sm w-full">
+        <p className="font-['Montserrat-Regular'] text-primary tracking-[0.40px] text-sm w-full">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
@@ -40,12 +40,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
           <AccordionItem
             key={item.id}
             value={item.id}
-            className="border-b border-[#b2b2b2]"
+            className="border-b border-primary-light"
           >
-            <AccordionTrigger className="py-2.5 font-normal text-neutral-800">
+            <AccordionTrigger className="py-2.5 font-normal text-primary">
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className="text-neutral-800">
+            <AccordionContent className="text-primary">
               {item.answer}
             </AccordionContent>
           </AccordionItem>
@@ -53,10 +53,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
       </Accordion>
     </div>
     <div
-      className="relative bg-cover bg-center bg-no-repeat flex flex-col md:h-[436px] justify-between"
+      className="relative bg-cover rounded-md bg-center bg-no-repeat flex flex-col md:h-[436px] justify-between"
       style={{ backgroundImage: "url('/images/faq-img.png')" }}
     >
-      <div className="inset-0 bg-black/50 z-5 absolute w-full h-full" />
+      <div className="inset-0 bg-black/50 rounded-md z-5 absolute w-full h-full" />
       <div className="z-10 p-6">
         <Image
           src="/images/logo-marca-white.png"
@@ -66,11 +66,11 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
           className="h-auto w-40"
         />
       </div>
-      <div className="z-10 text-white flex-col items-start text-start px-6 pb-4">
+      <div className="z-10 text-primary-contrast flex-col items-start text-start px-6 pb-4">
         <h1 className="text-2xl font-extrabold mb-6 text-start">
           Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
         </h1>
-        <Button className="flex items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-white w-auto">
+        <Button className="flex items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
           ENVIAR MENSAGEM
           <FaWhatsapp style={{ fontSize: 18 }} />
         </Button>

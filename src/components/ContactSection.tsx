@@ -23,13 +23,16 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
         src="/images/maps.png"
         fill
       />
-      <div className="absolute w-[300px] h-[437px] left-60 bg-[#0e0e0ee6] py-6 px-8">
-        <h2 className="font-['Montserrat-Bold'] font-bold text-white text-2xl leading-10">
+      <div className="absolute w-[300px] h-[437px] left-60 bg-secondary-dark bg-opacity-90 py-6 px-8">
+        <h2 className="font-['Montserrat-Bold'] font-bold text-primary-contrast text-2xl leading-10">
           FALE CONOSCO
         </h2>
-        <div className="flex flex-col pt-2 gap-[31px] w-[241px]">
+        <div className="flex flex-col pt-2 gap-8 w-[241px]">
           {contactInfo.map((info) => (
-            <div key={info.id} className="flex items-center gap-5 text-white">
+            <div
+              key={info.id}
+              className="flex items-center gap-5 text-primary-contrast"
+            >
               {info.icon}
               <div className="flex flex-col">
                 <h3 className="font-['Montserrat-SemiBold'] font-semibold text-sm">
@@ -42,7 +45,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
             </div>
           ))}
         </div>
-        <Button className="flex mt-8 items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-white w-[201px]">
+        <Button className="flex mt-8 items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-[201px]">
           ENVIAR MENSAGEM
           <FaWhatsapp style={{ fontSize: 18 }} />
         </Button>

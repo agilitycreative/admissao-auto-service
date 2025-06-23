@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-black;
+    @apply font-sans bg-primary-contrast text-black;
   }
 }
 
@@ -90,12 +90,8 @@
     --radius: 0.5rem;
   }
 
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

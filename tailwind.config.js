@@ -20,38 +20,25 @@ module.exports = {
         ],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#3c3c3c", // texto principal, títulos
+          light: "#b2b2b2", // bordas, detalhes
+          dark: "#202020", // fundo escuro, cards
+          contrast: "#fff", // texto em fundo escuro
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#1e1e1e", // footer, áreas secundárias
+          dark: "#0e0e0e", // fundo contato
+          overlay: "#00000080", // overlays, cards
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          green: "#16a34a", // green-600
+          greenDark: "#15803d", // green-700
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        neutral: {
+          DEFAULT: "#393939", // ícones, detalhes
+          light: "#f5f5f5", // fundo claro
+          dark: "#000", // preto puro
         },
       },
       borderRadius: {
