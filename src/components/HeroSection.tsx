@@ -3,12 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FaRegClock } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 
 import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
     <div className="-mx-4 w-[100vw] max-w-none h-[686px]">
+      {/* Preload da imagem principal para LCP */}
+      <Image
+        src="/images/hero-img.png"
+        alt="Hero background"
+        fill
+        className="hidden"
+        priority
+      />
       <div className="w-full h-[686px] flex flex-col justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
         <div className="bg-transparent w-full h-20"> </div>
         <div className="mx-auto p-4 items-start w-full max-w-[950px] flex flex-col gap-6">
