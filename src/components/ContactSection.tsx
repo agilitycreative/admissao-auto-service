@@ -64,7 +64,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
           alt="Contact background"
           fill
           className="object-cover"
-          priority
         />
       </div>
     </div>
