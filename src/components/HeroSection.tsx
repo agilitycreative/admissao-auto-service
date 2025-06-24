@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
             experiência. Qualidade, confiança e atendimento personalizado.
           </p>
 
-          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-green rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-0 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-primary-contrast text-sm tracking-normal leading-normal">
+          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
+            <span className="relative w-fit mt-0 [font-family:'Montserrat-SemiBold',Helvetica] font-bold shadow-sm text-primary-contrast text-sm tracking-normal leading-normal">
               ENTRAR EM CONTATO
             </span>
             <FaWhatsapp style={{ fontSize: 18, color: "white" }} />
@@ -35,9 +35,9 @@ const HeroSection: React.FC = () => {
             <div className="flex items-center gap-5">
               <FaRegClock style={{ fontSize: 24, color: "white" }} />
               <div>
-                <h3 className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-sm">
+                <h2 className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-sm">
                   Horário de funcionamento
-                </h3>
+                </h2>
                 <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm">
                   Segunda - Sexta
                   <br />
