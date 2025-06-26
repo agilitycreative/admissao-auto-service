@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
           </p>
 
           <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-0 font-semibold font-sans font-bold shadow-sm text-primary-contrast text-sm tracking-normal leading-normal">
+            <span className="relative w-fit mt-0 font-sans font-bold shadow-sm text-primary-contrast text-sm tracking-normal leading-normal">
               ENTRAR EM CONTATO
             </span>
             <FaWhatsapp style={{ fontSize: 18, color: "white" }} />
