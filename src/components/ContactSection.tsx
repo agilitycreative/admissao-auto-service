@@ -28,7 +28,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
         <div className="h-full max-w-[954px] mx-auto sm:relative">
           {/* Caixa de Texto */}
           <div className="w-full sm:w-[300px] sm:h-full bg-secondary-dark bg-opacity-90 py-6 px-8">
-            <h2 className="font-['Montserrat-Bold'] font-bold text-primary-contrast text-2xl leading-10">
+            <h2 className="font-bold font-sans text-primary-contrast text-2xl leading-10">
               FALE CONOSCO
             </h2>
             <div className="flex flex-col pt-2 gap-8 w-full sm:w-[241px]">
@@ -39,10 +39,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
                 >
                   {info.icon}
                   <div className="flex flex-col">
-                    <h3 className="font-['Montserrat-SemiBold'] font-semibold text-sm">
+                    <h3 className="font-semibold font-sans text-sm">
                       {info.title}
                     </h3>
-                    <p className="font-['Montserrat-Regular'] font-normal text-sm whitespace-pre-line">
+                    <p className="font-normal font-sans text-sm whitespace-pre-line">
                       {info.details}
                     </p>
                   </div>

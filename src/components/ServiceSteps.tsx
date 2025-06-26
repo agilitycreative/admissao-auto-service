@@ -24,10 +24,10 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
     <div className="max-w-[954px] mx-auto ">
       <div className="flex flex-col gap-7">
         <div className="relative p-4">
-          <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary-contrast text-2xl md:text-3xl leading-10">
+          <h2 className="font-extrabold font-sans text-primary-contrast text-2xl md:text-3xl leading-10">
             ETAPAS DO ATENDIMENTO
           </h2>
-          <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm tracking-wide leading-5">
+          <p className="font-normal font-sans text-primary-contrast text-sm tracking-wide leading-5">
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
@@ -38,10 +38,10 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
                 <div className="flex items-center justify-center text-[#393939]">
                   {step.icon}
                 </div>
-                <div className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-xs text-center tracking-wide leading-5">
+                <div className="font-semibold font-sans text-primary-contrast text-xs text-center tracking-wide leading-5">
                   {step.title}
                   <br />
-                  <span className="font-light italic text-xs block h-4">
+                  <span className="font-light italic text-xs block h-4 font-sans">
                     {step.subtitle || "\u00A0"}
                   </span>
                 </div>

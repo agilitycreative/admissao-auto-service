@@ -23,10 +23,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
   <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] w-full">
     <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
+        <h2 className="font-bold font-sans text-primary text-2xl leading-10">
           PERGUNTAS FREQUENTES
         </h2>
-        <p className="font-['Montserrat-Regular'] text-primary tracking-wider text-sm w-full">
+        <p className="font-normal font-sans text-primary tracking-wider text-sm w-full">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis

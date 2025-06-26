@@ -29,10 +29,10 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
           className="absolute overflow-hidden -left-40 md:-left-72 -top-4"
         />
 
-        <h2 className="font-['Montserrat-Bold'] font-bold text-primary text-2xl leading-10">
+        <h2 className="font-sans font-bold text-primary text-2xl leading-10">
           NOSSAS UNIDADES
         </h2>
-        <p className="font-['Montserrat-Regular'] font-normal text-primary text-sm tracking-[0.40px] leading-4 max-w-[590px] mt-2">
+        <p className="font-sans font-normal text-primary text-sm tracking-[0.40px] leading-4 max-w-[590px] mt-2">
           Temos duas unidades prontas para lhe atender e dar a manutenção que
           seu veículo merece. Estamos presentes no bairro Sapiranga e
           Guararapes.
@@ -49,7 +49,7 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
               height={210}
             />
             <CardContent className="flex flex-col gap-2.5 p-5 bg-primary-dark rounded-[0px_0px_10px_10px]">
-              <h3 className="font-['Roboto-SemiBold'] font-semibold text-primary-contrast text-base tracking-[0.25px] leading-5">
+              <h3 className="font-sans font-semibold text-primary-contrast text-base tracking-[0.25px] leading-5">
                 {location.name}
               </h3>
               <p className="text-primary-contrast text-sm">
