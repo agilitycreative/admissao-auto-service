@@ -16,13 +16,7 @@ interface ContactSectionProps {
 
 const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
   <section className="-mx-4 w-[100vw] max-w-none">
-    {/*
-      Layout:
-      - Mobile (<sm): Coluna vertical. Caixa de texto em cima, imagem embaixo.
-      - Desktop (sm+): Container vira `relative`. A caixa de texto fica em um
-        container `absolute` que flutua sobre a imagem, alinhado pela `max-w`.
-    */}
-    <div className="flex flex-col sm:block sm:relative sm:h-[440px]">
+    <div className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
       {/* Container da Caixa de Texto (em desktop, vira um overlay) */}
       <div className="w-full sm:absolute sm:inset-0 sm:z-10">
         <div className="h-full max-w-[954px] mx-auto sm:relative">
@@ -31,7 +25,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
             <h2 className="font-bold font-sans text-primary-contrast text-2xl leading-10">
               FALE CONOSCO
             </h2>
-            <div className="flex flex-col pt-2 gap-8 w-full sm:w-[241px]">
+            <div className="flex flex-col pt-4 gap-5 w-full sm:w-[241px]">
               {contactInfo.map((info) => (
                 <div
                   key={info.id}
@@ -49,7 +43,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
                 </div>
               ))}
             </div>
-            <Button className="flex mt-8 items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
+            <Button className="flex mt-8 md:w-full items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
               ENVIAR MENSAGEM
               <FaWhatsapp style={{ fontSize: 18 }} />
             </Button>
