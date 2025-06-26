@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface AccordionContextType {
   openItems: string[];
@@ -120,11 +121,11 @@ export function AccordionTrigger({
       {children}
       <span
         className={cn(
-          "ml-2 transition-transform",
-          isOpen ? "rotate-90" : "rotate-0"
+          "ml-2 transition-transform duration-300 ease-in-out",
+          isOpen ? "rotate-180" : "rotate-0"
         )}
       >
-        ▶
+        <MdKeyboardArrowDown className="w-5 h-5" />
       </span>
     </button>
   );
@@ -142,9 +143,16 @@ export function AccordionContent({
   className,
   ...props
 }: AccordionContentProps) {
-  if (!isOpen) return null;
   return (
-    <div className={cn("py-2", className)} {...props}>
+    <div
+      className={cn(
+        "overflow-hidden transition-all duration-300 ease-in-out py-2",
+        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+        className
+      )}
+      aria-hidden={!isOpen}
+      {...props}
+    >
       {children}
     </div>
   );
