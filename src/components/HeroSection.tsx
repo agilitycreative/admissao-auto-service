@@ -18,31 +18,31 @@ const HeroSection: React.FC = () => {
         className="hidden"
         priority
       />
-      <div className="w-full h-[686px] flex flex-col justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
-        <div className="bg-transparent w-full h-20"> </div>
-        <div className="mx-auto p-4 items-start w-full max-w-[950px] flex flex-col gap-6">
-          <h1 className="w-full mt-4 md:mt-0 max-w-[424px] text-center md:text-left font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[normal]">
+      <div className="w-full h-[686px] flex flex-col sm:justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
+        <div className="absolute md:flex bg-transparent w-full h-20"> </div>
+        <div className="mx-auto h-full justify-center  sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] flex flex-col gap-6">
+          <h1 className="w-full max-w-[424px] text-center md:text-left font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
           </h1>
 
-          <p className="max-w-[490px] text-center md:text-left font-medium font-sans text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
+          <p className="max-w-[490px] text-center md:text-left font-medium font-sans text-primary-contrast text-sm tracking-normal leading-normal">
             Especialistas em manutenção automotiva com mais de 15 anos de
             experiência. Qualidade, confiança e atendimento personalizado.
           </p>
 
-          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-0 font-semibold font-sans font-bold shadow-sm text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
+          <Button className="mt-16 sm:mt-0 inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
+            <span className="relative w-fit mt-0 font-sans font-bold shadow-sm text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
               ENTRAR EM CONTATO
             </span>
-            <FaWhatsapp style={{ fontSize: 18, color: "white" }} />
+            <FaWhatsapp className="w-[18px] h-[18px] text-primary-contrast" />
           </Button>
         </div>
 
-        <Card className="bg-secondary-overlay w-full items-center justify-center gap-2.5 px-5 py-0 md:py-10 border-none rounded-none">
-          <CardContent className="flex flex-col sm:flex-row w-full max-w-[952px] mx-auto items-start gap-6 sm:gap-8 md:gap-20 p-0">
+        <Card className="hidden sm:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-10 border-none rounded-none">
+          <CardContent className="flex w-full max-w-[952px] justify-between mx-auto items-start p-0">
             {/* Horário de funcionamento */}
             <div className="flex items-center gap-5">
-              <FaRegClock style={{ fontSize: 24, color: "white" }} />
+              <FaRegClock className="w-6 h-6 text-primary-contrast" />
               <div>
                 <h2 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Horário de funcionamento
@@ -56,8 +56,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Cidade dos Funcionários */}
-            <div className="flex items-start gap-5">
-              <GoHome style={{ fontSize: 24, color: "white" }} />
+            <div className="flex items-center gap-5">
+              <GoHome className="w-6 h-6 text-primary-contrast" />
               <div>
                 <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Cidade dos Funcionários
@@ -71,8 +71,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Sapiranga */}
-            <div className="flex items-start gap-5">
-              <GoHome style={{ fontSize: 24, color: "white" }} />
+            <div className="flex items-center gap-5">
+              <GoHome className="w-6 h-6 text-primary-contrast" />
               <div>
                 <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Sapiranga

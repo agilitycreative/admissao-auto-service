@@ -12,11 +12,11 @@ interface PartnerLogosProps {
 }
 
 const PartnerLogos: React.FC<PartnerLogosProps> = ({ partnerLogos }) => (
-  <div className="inline-flex overflow-x-auto items-center gap-3 md:gap-20 opacity-40">
+  <div className="w-full flex justify-center overflow-x-hidden items-center gap-20 opacity-40 max-w-[954px]">
     {partnerLogos.map((logo) => (
       <Image
         key={logo.id}
-        className="h-[35px] w-auto object-contain"
+        className="size-9 object-cover flex-shrink-0"
         alt={logo.alt}
         src={logo.src}
         width={100}
