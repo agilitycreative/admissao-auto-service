@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Button from "./ui/button";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 type FAQItem = {
   id: string;
@@ -23,10 +24,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
   <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] w-full">
     <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h2 className="font-bold font-sans text-primary text-2xl leading-10">
+        <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">
           PERGUNTAS FREQUENTES
         </h2>
-        <p className="font-normal font-sans text-primary tracking-wider text-sm w-full">
+        <p className="font-sans font-normal text-primary tracking-wider text-xs sm:text-sm w-full">
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
           mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
@@ -42,10 +43,11 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
             value={item.id}
             className="border-b border-primary-light"
           >
-            <AccordionTrigger className="py-2.5 font-normal text-primary">
+            <AccordionTrigger className="py-2.5 font-normal text-primary flex items-center justify-between text-sm sm:text-base">
               {item.question}
+              <MdKeyboardArrowDown className="ml-2 w-5 h-5" />
             </AccordionTrigger>
-            <AccordionContent className="text-primary">
+            <AccordionContent className="text-primary text-xs sm:text-sm">
               {item.answer}
             </AccordionContent>
           </AccordionItem>
@@ -67,10 +69,10 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
         />
       </div>
       <div className="z-10 text-primary-contrast flex-col items-start text-start px-6 pb-8">
-        <h1 className="text-2xl font-extrabold mb-6 text-start">
+        <h1 className="text-xl sm:text-2xl font-extrabold mb-6 text-start">
           Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
         </h1>
-        <Button className="flex items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
+        <Button className="flex items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
           ENVIAR MENSAGEM
           <FaWhatsapp style={{ fontSize: 18 }} />
         </Button>

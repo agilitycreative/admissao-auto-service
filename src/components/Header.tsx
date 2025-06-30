@@ -38,7 +38,7 @@ const Frame = (): React.ReactElement => {
       <div className="hidden md:inline-flex gap-10 items-center">
         {navItems.map((item, index) => (
           <div key={`nav-item-${index}`}>
-            <div className="font-semibold text-primary-contrast text-sm [font-family:'Montserrat-SemiBold',Helvetica]">
+            <div className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm [font-family:'Montserrat-SemiBold',Helvetica]">
               {item.name}
             </div>
           </div>
@@ -62,7 +62,7 @@ const Frame = (): React.ReactElement => {
             {navItems.map((item, index) => (
               <div
                 key={`nav-item-mobile-${index}`}
-                className="font-semibold text-primary-contrast text-base [font-family:'Montserrat-SemiBold',Helvetica] w-full text-left cursor-pointer hover:underline"
+                className="font-semibold font-sans text-primary-contrast text-sm sm:text-base [font-family:'Montserrat-SemiBold',Helvetica] w-full text-left cursor-pointer hover:underline"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}

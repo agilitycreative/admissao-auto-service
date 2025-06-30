@@ -39,7 +39,7 @@ const AboutUsSection = () => (
         </div>
       </div>
       <div className="flex flex-col w-full md:w-[500px] items-start gap-7 md:ml-12 order-1 md:order-2">
-        <div className="flex flex-col gap-2.5 relative ">
+        <div className="flex flex-col gap-2 relative ">
           <Image
             src={"/images/vector.svg"}
             alt="admissao vector"
@@ -47,10 +47,10 @@ const AboutUsSection = () => (
             height={206}
             className="absolute -left-32 md:-left-60 -top-10"
           />
-          <h2 className="font-extrabold font-sans text-primary text-3xl leading-10">
+          <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
             QUEM SOMOS
           </h2>
-          <p className="font-normal font-sans text-primary tracking-wide leading-5 text-sm">
+          <p className="font-normal font-sans text-primary tracking-wide leading-5 text-xs sm:text-sm">
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
             mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
             fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
@@ -63,15 +63,15 @@ const AboutUsSection = () => (
             mi. Aliquam in hendrerit urna.
           </p>
         </div>
-        <div className="flex flex-col h-40 gap-9 w-full">
+        <div className="flex flex-col h-40 gap-8 w-full">
           <div className="flex gap-5 w-full justify-between">
             <div className="flex items-center justify-center gap-5 flex-1">
               <TbCalendarTime style={{ fontSize: 26 }} />
               <div className="flex flex-col gap-0">
-                <div className="text-shadow-sm font-normal font-sans text-black text-4xl tracking-wide leading-5">
+                <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
                   16
                 </div>
-                <div className="pt-2 font-normal font-sans text-primary text-sm tracking-wide leading-5">
+                <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5">
                   anos de experiência
                 </div>
               </div>
@@ -79,10 +79,10 @@ const AboutUsSection = () => (
             <div className="flex items-center justify-center gap-5 flex-1">
               <IoCarSportOutline style={{ fontSize: 23 }} />
               <div className="flex flex-col gap-px">
-                <div className="text-shadow-sm font-normal font-sans text-black text-4xl tracking-wide leading-5">
+                <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
                   +10
                 </div>
-                <div className="pt-2 font-normal font-sans text-primary text-sm tracking-wide leading-5 whitespace-nowrap">
+                <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 whitespace-nowrap">
                   marcas atendidas
                 </div>
               </div>
@@ -91,10 +91,10 @@ const AboutUsSection = () => (
           <div className="flex w-full justify-center items-center gap-5">
             <PiEngineBold style={{ fontSize: 23 }} />
             <div className="flex flex-col">
-              <div className="text-shadow-sm font-normal font-sans text-black text-4xl tracking-wide leading-5">
+              <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
                 +1000
               </div>
-              <div className="pt-2 font-normal font-sans text-primary text-sm tracking-wide leading-5 whitespace-nowrap">
+              <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 whitespace-nowrap">
                 serviços realizados
               </div>
             </div>

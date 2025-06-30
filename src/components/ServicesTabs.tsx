@@ -36,10 +36,10 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
               height={206}
               className="absolute -left-72 -top-4"
             />
-            <h2 className="font-extrabold font-sans text-primary text-3xl leading-10">
+            <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
               SERVIÇOS ADMISSÃO
             </h2>
-            <p className="font-normal font-sans text-primary text-sm tracking-wide leading-5 max-w-[590px] mt-2">
+            <p className="font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 max-w-[590px] mt-2">
               Conheça alguns dos serviços que oferemos aqui na Admissão Auto
               Service. Desde revisões de rotina até os problemas mais sérios de
               motor, câmbio ou similar, conte sempre com a equipe especializada
@@ -63,11 +63,11 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                       >
                         {category.icon}
                       </div>
-                      <div className="font-semibold font-sans text-black text-base text-center mt-2">
+                      <div className="font-semibold font-sans text-black text-sm sm:text-base text-center mt-2">
                         {category.title}
                       </div>
                     </div>
-                    <div className="font-normal font-sans text-[#3c3c3cc3] text-sm text-center line-clamp-3">
+                    <div className="font-normal font-sans text-[#3c3c3cc3] text-xs sm:text-sm text-center line-clamp-3">
                       {category.description}
                     </div>
                   </TabsTrigger>

@@ -22,10 +22,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
         <div className="h-full max-w-[954px] mx-auto sm:relative">
           {/* Caixa de Texto */}
           <div className="w-full sm:w-[300px] sm:h-full bg-secondary-dark bg-opacity-90 py-6 px-8">
-            <h2 className="font-bold font-sans text-primary-contrast text-2xl leading-10">
+            <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10">
               FALE CONOSCO
             </h2>
-            <div className="flex flex-col pt-4 gap-5 w-full sm:w-[241px]">
+            <div className="flex flex-col pt-2 gap-8 w-full sm:w-[241px]">
               {contactInfo.map((info) => (
                 <div
                   key={info.id}
@@ -33,17 +33,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
                 >
                   {info.icon}
                   <div className="flex flex-col">
-                    <h3 className="font-semibold font-sans text-sm">
+                    <h3 className="font-semibold font-sans text-xs sm:text-sm">
                       {info.title}
                     </h3>
-                    <p className="font-normal font-sans text-sm whitespace-pre-line">
+                    <p className="font-normal font-sans text-xs sm:text-sm whitespace-pre-line">
                       {info.details}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
-            <Button className="flex mt-8 md:w-full items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
+            <Button className="flex mt-8 items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
               ENVIAR MENSAGEM
               <FaWhatsapp style={{ fontSize: 18 }} />
             </Button>

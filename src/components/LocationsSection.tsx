@@ -29,10 +29,10 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
           className="absolute overflow-hidden -left-40 md:-left-72 -top-4"
         />
 
-        <h2 className="font-sans font-bold text-primary text-2xl leading-10">
+        <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">
           NOSSAS UNIDADES
         </h2>
-        <p className="font-sans font-normal text-primary text-sm tracking-[0.40px] leading-4 max-w-[590px] mt-2">
+        <p className="font-sans font-normal text-primary text-xs sm:text-sm tracking-[0.40px] leading-4 max-w-[590px] mt-2">
           Temos duas unidades prontas para lhe atender e dar a manutenção que
           seu veículo merece. Estamos presentes no bairro Sapiranga e
           Guararapes.
@@ -40,7 +40,10 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
       </div>
       <div className="flex flex-wrap gap-12 w-full">
         {locations.map((location) => (
-          <Card key={location.id} className="md:flex-1 w-full rounded-lg overflow-hidden">
+          <Card
+            key={location.id}
+            className="md:flex-1 w-full rounded-lg overflow-hidden"
+          >
             <Image
               className="w-full h-[210px] object-cover"
               alt={location.name}
@@ -49,21 +52,21 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
               height={210}
             />
             <CardContent className="flex flex-col gap-2.5 p-5 bg-primary-dark rounded-[0px_0px_10px_10px]">
-              <h3 className="font-sans font-semibold text-primary-contrast text-base tracking-[0.25px] leading-5">
+              <h3 className="font-sans font-semibold text-primary-contrast text-sm sm:text-base tracking-[0.25px] leading-5">
                 {location.name}
               </h3>
-              <p className="text-primary-contrast text-sm">
+              <p className="text-primary-contrast text-xs sm:text-sm">
                 {location.description}
               </p>
               <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="w-4 h-5 text-primary-contrast" />
-                <p className="text-primary-contrast text-sm">
+                <p className="text-primary-contrast text-xs sm:text-sm">
                   {location.address}
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <BsFillTelephoneFill className="w-4 h-5 text-primary-contrast" />
-                <p className="text-primary-contrast text-sm">
+                <p className="text-primary-contrast text-xs sm:text-sm">
                   {location.phone}
                 </p>
               </div>
