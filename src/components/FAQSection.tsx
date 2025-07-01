@@ -8,7 +8,6 @@ import {
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Button from "./ui/button";
-import { MdKeyboardArrowDown } from "react-icons/md";
 
 type FAQItem = {
   id: string;
@@ -17,11 +16,15 @@ type FAQItem = {
 };
 
 interface FAQSectionProps {
+  id?: string;
   faqItems: FAQItem[];
 }
 
-const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
-  <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] 2xl:max-w-[1440px] w-full">
+const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
+  <section
+    id={id}
+    className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] 2xl:max-w-[1440px] w-full"
+  >
     <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
         <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">
@@ -77,7 +80,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqItems }) => (
         </Button>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default FAQSection;

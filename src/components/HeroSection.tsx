@@ -7,9 +7,13 @@ import Image from "next/image";
 
 import React from "react";
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  id?: string;
+}
+
+const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <div className="-mx-4 w-[100vw] max-w-none h-[686px]">
+    <section id={id} className="-mx-4 w-[100vw] max-w-none h-[686px]">
       {/* Preload da imagem principal para LCP */}
       <Image
         src="/images/hero-img.png"
@@ -87,7 +91,7 @@ const HeroSection: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
 

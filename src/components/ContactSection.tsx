@@ -11,11 +11,12 @@ type ContactInfo = {
 };
 
 interface ContactSectionProps {
+  id?: string;
   contactInfo: ContactInfo[];
 }
 
-const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
-  <section className="-mx-4 w-[100vw] max-w-none">
+const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
+  <section id={id} className="-mx-4 w-[100vw] max-w-none">
     <div className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
       {/* Container da Caixa de Texto (em desktop, vira um overlay) */}
       <div className="w-full sm:absolute sm:inset-0 sm:z-10">

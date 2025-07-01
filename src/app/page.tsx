@@ -169,15 +169,15 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center w-full gap-16 md:gap-20 px-4">
       <Header />
-      <HeroSection />
+      <HeroSection id="inicio" />
       <PartnerLogos partnerLogos={partnerLogos} />
-      <AboutUsSection />
-      <ServicesTabs serviceCategories={serviceCategories} />
+      <AboutUsSection id="sobre" />
+      <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
       <ServiceSteps serviceSteps={serviceSteps} />
-      <LocationsSection locations={locations} />
-      <FAQSection faqItems={faqItems} />
+      <LocationsSection id="localizacoes" locations={locations} />
+      <FAQSection id="faq" faqItems={faqItems} />
       <div className="w-full">
-        <ContactSection contactInfo={contactInfo} />
+        <ContactSection id="contato" contactInfo={contactInfo} />
         <Footer />
       </div>
     </div>

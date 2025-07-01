@@ -18,10 +18,14 @@ type ServiceCategory = {
 };
 
 interface ServicesTabsProps {
+  id?: string;
   serviceCategories: ServiceCategory[];
 }
 
-const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
+const ServicesTabs: React.FC<ServicesTabsProps> = ({
+  id,
+  serviceCategories,
+}) => {
   const iconPositions = [
     "top-[35%] left-[35%] 2xl:top-[35%] 2xl:left-[42%]",
     "top-[50%] left-[73%] 2xl:top-[50%] 2xl:left-[65%]",
@@ -63,7 +67,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
   }
 
   return (
-    <section className="w-full max-w-[954px] 2xl:max-w-[1440px]">
+    <section id={id} className="w-full max-w-[954px] 2xl:max-w-[1440px]">
       <div className="flex flex-col items-center gap-12 py-2.5">
         <div className="flex flex-col items-center gap-24 w-full">
           <div className="w-full relative">
