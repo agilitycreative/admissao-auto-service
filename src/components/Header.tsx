@@ -48,7 +48,7 @@ const Frame = (): React.ReactElement => {
   return (
     <div
       className={`
-        z-50 flex max-w-[954px] w-[calc(100%-20px)] md:w-[calc(100%-64px)] lg:w-[954px]
+        z-50 flex max-w-[954px] 2xl:max-w-[1440px] w-[calc(100%-20px)] md:w-[calc(100%-64px)]
         justify-between p-5 bg-[#000000c2] rounded-full items-center
         transition-transform duration-300
         fixed left-1/2 -translate-x-1/2

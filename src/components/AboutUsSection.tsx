@@ -5,7 +5,7 @@ import { PiEngineBold } from "react-icons/pi";
 import Image from "next/image";
 
 const AboutUsSection = () => (
-  <section className="flex flex-col w-full max-w-[954px] items-start gap-y-16 py-2.5">
+  <section className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1440px] items-start gap-y-16 py-2.5">
     <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full">
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
         <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
@@ -38,7 +38,7 @@ const AboutUsSection = () => (
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full md:w-[500px] items-start gap-7 md:ml-12 order-1 md:order-2">
+      <div className="flex flex-col w-full 2xl:flex-1 md:w-[500px] items-start gap-7 md:ml-12 order-1 md:order-2">
         <div className="flex flex-col gap-2 relative ">
           <Image
             src={"/images/vector.svg"}

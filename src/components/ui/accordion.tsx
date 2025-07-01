@@ -21,7 +21,7 @@ interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 type AccordionChild = React.ReactElement<{
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
 }>;
 
@@ -82,7 +82,7 @@ export function AccordionItem({
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child as AccordionChild, {
-              accordionValue: value,
+              accordionvalue: value,
               isOpen,
             })
           : child
@@ -93,13 +93,13 @@ export function AccordionItem({
 
 interface AccordionTriggerProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
   children: React.ReactNode;
 }
 
 export function AccordionTrigger({
-  accordionValue,
+  accordionvalue,
   isOpen,
   children,
   className,
@@ -115,7 +115,7 @@ export function AccordionTrigger({
         className
       )}
       aria-expanded={isOpen}
-      onClick={() => accordionValue && ctx.onToggle(accordionValue)}
+      onClick={() => accordionvalue && ctx.onToggle(accordionvalue)}
       {...props}
     >
       {children}
@@ -132,7 +132,7 @@ export function AccordionTrigger({
 }
 
 interface AccordionContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
   children: React.ReactNode;
 }

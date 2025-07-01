@@ -2,7 +2,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-
 interface TabsContextType {
   value: string;
   setValue: (value: string) => void;
@@ -93,4 +92,10 @@ export function TabsContent({
       {children}
     </div>
   );
+}
+
+export function useTabs() {
+  const ctx = React.useContext(TabsContext);
+  if (!ctx) throw new Error("useTabs must be used within Tabs");
+  return ctx;
 }

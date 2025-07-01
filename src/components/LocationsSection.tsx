@@ -19,7 +19,7 @@ interface LocationsSectionProps {
 
 const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
   <section className="w-full py-[50px]">
-    <div className="max-w-[956px] mx-auto flex flex-col gap-12">
+    <div className="max-w-[956px] 2xl:max-w-[1440px] mx-auto flex flex-col gap-12">
       <div className="relative">
         <Image
           src={"/images/vector.svg"}
@@ -32,7 +32,7 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
         <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">
           NOSSAS UNIDADES
         </h2>
-        <p className="font-sans font-normal text-primary text-xs sm:text-sm tracking-[0.40px] leading-4 max-w-[590px] mt-2">
+        <p className="font-sans font-normal text-primary text-xs sm:text-sm tracking-[0.40px] leading-4 max-w-[590px] 2xl:max-w-full mt-2">
           Temos duas unidades prontas para lhe atender e dar a manutenção que
           seu veículo merece. Estamos presentes no bairro Sapiranga e
           Guararapes.

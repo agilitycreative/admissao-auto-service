@@ -21,7 +21,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
       height={206}
       className="absolute right-40 top-10 z-50 brightness-200 opacity-100 mix-blend-screen"
     />
-    <div className="max-w-[954px] mx-auto ">
+    <div className="max-w-[954px] 2xl:max-w-[1440px] mx-auto ">
       <div className="flex flex-col gap-7">
         <div className="relative p-4">
           <h2 className="font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl leading-10">
