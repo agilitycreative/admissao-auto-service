@@ -1,9 +1,31 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Frame = (): React.ReactElement => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      // Só aplica sticky/ocultar em telas menores que md
+      if (window.innerWidth < 768) {
+        if (currentScrollY > lastScrollY && currentScrollY > 40) {
+          setShowHeader(false); // rolando para baixo
+        } else {
+          setShowHeader(true); // rolando para cima
+        }
+        setLastScrollY(currentScrollY);
+      } else {
+        setShowHeader(true); // sempre mostra em md+
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   const navItems = [
     {
       name: "Início",
@@ -24,7 +46,17 @@ const Frame = (): React.ReactElement => {
   ];
 
   return (
-    <div className="mt-6 fixed z-50 flex max-w-[954px] w-[calc(100%-40px)] sm:w-[calc(100%-48px)] md:w-[calc(100%-64px)] lg:w-[954px] justify-between p-5 bg-[#000000c2] rounded-full items-center left-1/2 -translate-x-1/2">
+    <div
+      className={`
+        z-50 flex max-w-[954px] w-[calc(100%-20px)] md:w-[calc(100%-64px)] lg:w-[954px]
+        justify-between p-5 bg-[#000000c2] rounded-full items-center
+        transition-transform duration-300
+        fixed left-1/2 -translate-x-1/2
+        ${showHeader ? "translate-y-0 top-6" : "-translate-y-full"}
+        lg:absolute lg:translate-y-0
+      `}
+      style={{ willChange: "transform" }}
+    >
       <div className="inline-flex items-center gap-3">
         <Image
           className="w-[161px] h-6"

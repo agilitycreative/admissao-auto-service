@@ -97,12 +97,12 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                             left: pos.left,
                           }}
                           className={`w-8 h-8 md:h-10 md:w-10 flex items-center justify-center p-1.5 md:p-2.5 rounded-full transition
-                            ${
-                              isActive
-                                ? "bg-white text-black shadow-lg"
-                                : "bg-black text-white"
-                            }
-                          `}
+                          ${
+                            isActive
+                              ? "bg-white text-black shadow-lg"
+                              : "bg-black text-white"
+                          }
+                        `}
                         >
                           {cat.icon}
                         </div>

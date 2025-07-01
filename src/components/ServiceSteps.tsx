@@ -31,10 +31,10 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
-        <div className="flex flex-wrap items-center justify-center w-full gap-2 md:gap-5">
+        <div className="flex flex-wrap justify-center w-full max-w-lg lg:max-w-none mx-auto gap-1 sm:gap-2 md:gap-5">
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
-              <div className="flex flex-col items-center gap-3 w-full min-w-[120px] max-w-[150px]">
+              <div className="flex flex-col items-center gap-3 min-w-[140px] max-w-[150px] w-full">
                 <div className="flex items-center justify-center text-[#393939]">
                   {step.icon}
                 </div>
@@ -48,7 +48,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
               </div>
               {index < serviceSteps.length - 1 && (
                 <Image
-                  className="w-2.5 h-2.5 hidden md:inline"
+                  className="w-2.5 h-2.5 hidden lg:inline"
                   alt="Arrow"
                   src="/images/arrow.png"
                   width={10}
