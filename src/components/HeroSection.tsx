@@ -4,6 +4,11 @@ import { FaRegClock } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
 
 import React from "react";
 
@@ -34,12 +39,19 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             experiência. Qualidade, confiança e atendimento personalizado.
           </p>
 
-          <Button className="mt-16 sm:mt-0 inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-0 font-sans font-bold shadow-sm text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
-              ENTRAR EM CONTATO
-            </span>
-            <FaWhatsapp className="w-[18px] h-[18px] text-primary-contrast" />
-          </Button>
+          <a
+            href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto self-center md:self-start"
+          >
+            <Button className="mt-16 sm:mt-0 inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto">
+              <span className="relative w-fit mt-0 font-sans font-bold shadow-sm text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
+                ENTRAR EM CONTATO
+              </span>
+              <FaWhatsapp className="w-[18px] h-[18px] text-primary-contrast" />
+            </Button>
+          </a>
         </div>
 
         <Card className="hidden sm:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-10 border-none rounded-none">

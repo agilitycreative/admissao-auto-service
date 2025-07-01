@@ -8,6 +8,11 @@ import {
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Button from "./ui/button";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
 
 type FAQItem = {
   id: string;
@@ -74,10 +79,16 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
         <h1 className="text-xl sm:text-2xl font-extrabold mb-6 text-start">
           Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
         </h1>
-        <Button className="flex items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
-          ENVIAR MENSAGEM
-          <FaWhatsapp style={{ fontSize: 18 }} />
-        </Button>
+        <a
+          href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="flex items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
+            ENVIAR MENSAGEM
+            <FaWhatsapp style={{ fontSize: 18 }} />
+          </Button>
+        </a>
       </div>
     </div>
   </section>

@@ -2,6 +2,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
 
 type ContactInfo = {
   id: number;
@@ -26,7 +31,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
             <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10">
               FALE CONOSCO
             </h2>
-            <div className="flex flex-col pt-2 gap-8 w-full sm:w-[241px]">
+            <div className="flex flex-col pt-2 pb-6 gap-8 w-full sm:w-[241px]">
               {contactInfo.map((info) => (
                 <div
                   key={info.id}
@@ -44,21 +49,31 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                 </div>
               ))}
             </div>
-            <Button className="flex mt-8 items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
-              ENVIAR MENSAGEM
-              <FaWhatsapp style={{ fontSize: 18 }} />
-            </Button>
+            <a
+              href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4"
+            >
+              <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-contrast font-semibold text-sm shadow hover:bg-primary-dark transition-colors">
+                ENTRAR EM CONTATO
+                <FaWhatsapp style={{ fontSize: 18 }} />
+              </button>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Container da Imagem */}
+      {/* Container do Mapa */}
       <div className="relative w-full h-96 sm:h-full">
-        <Image
-          src="/images/maps.png"
-          alt="Contact background"
-          fill
-          className="object-cover"
+        <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=17gmyxkquP9i_jkVcIY1CNFZjM7vihNk&ehbc=2E312F&noprof=1"
+          width="100%"
+          height="100%"
+          loading="lazy"
+          style={{ border: 0, minHeight: 300, borderRadius: 8 }}
+          allowFullScreen={true}
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
     </div>

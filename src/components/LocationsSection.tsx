@@ -61,15 +61,25 @@ const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
               </p>
               <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="w-4 h-5 text-primary-contrast" />
-                <p className="text-primary-contrast text-xs sm:text-sm">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    location.address
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-contrast text-xs sm:text-sm hover:underline"
+                >
                   {location.address}
-                </p>
+                </a>
               </div>
               <div className="flex items-start gap-3">
                 <BsFillTelephoneFill className="w-4 h-5 text-primary-contrast" />
-                <p className="text-primary-contrast text-xs sm:text-sm">
+                <a
+                  href={`tel:${location.phone.replace(/[^0-9]/g, "")}`}
+                  className="text-primary-contrast text-xs sm:text-sm hover:underline"
+                >
                   {location.phone}
-                </p>
+                </a>
               </div>
             </CardContent>
           </Card>
