@@ -16,12 +16,12 @@ interface ServicesTabsProps {
 
 const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
   const iconPositions = [
-    { top: "28%", left: "23.14%" },
-    { top: "50%", left: "50%" },
-    { top: "40%", left: "14%" },
-    { top: "30%", left: "6%" },
-    { top: "50%", left: "30%" },
-    { top: "40%", left: "40.10%" },
+    { top: "35%", left: "35%" },
+    { top: "50%", left: "73%" },
+    { top: "37%", left: "20%" },
+    { top: "37%", left: "11%" },
+    { top: "62%", left: "50%" },
+    { top: "30%", left: "55%" },
   ];
 
   return (
@@ -55,7 +55,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                   <TabsTrigger
                     key={category.id}
                     value={category.id}
-                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 h-48 rounded-none`}
+                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 h-48 rounded-none min-w-[150px] max-w-[200px]`}
                   >
                     <div className="flex flex-col items-center">
                       <div
@@ -96,7 +96,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
                             top: pos.top,
                             left: pos.left,
                           }}
-                          className={`w-8 h-8 md:h-10 md:w-10 flex items-center justify-center p-1.5 md:p-2.5 rounded-full transition
+                          className={`w-6 h-6 md:h-10 md:w-10 flex items-center justify-center p-1.5 md:p-2.5 rounded-full transition
                           ${
                             isActive
                               ? "bg-white text-black shadow-lg"
