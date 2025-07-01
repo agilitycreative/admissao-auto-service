@@ -26,7 +26,7 @@ const LocationsSection: React.FC<LocationsSectionProps> = ({ locations }) => (
           alt="admissao vector"
           width={420}
           height={206}
-          className="absolute overflow-hidden -left-40 md:-left-72 -top-4"
+          className="absolute overflow-hidden -left-40 md:-left-60 -top-10"
         />
 
         <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">

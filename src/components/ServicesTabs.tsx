@@ -72,7 +72,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({ serviceCategories }) => {
               alt="admissao vector"
               width={420}
               height={206}
-              className="absolute -left-72 -top-4"
+              className="absolute -left-60 -top-10"
             />
             <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
               SERVIÇOS ADMISSÃO
