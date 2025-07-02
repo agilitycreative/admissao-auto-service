@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   getWhatsAppLink,
@@ -55,10 +54,10 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
               rel="noopener noreferrer"
               className="mt-4"
             >
-              <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-contrast font-semibold text-sm shadow hover:bg-primary-dark transition-colors">
+              <Button className="flex items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
                 ENTRAR EM CONTATO
                 <FaWhatsapp style={{ fontSize: 18 }} />
-              </button>
+              </Button>
             </a>
           </div>
         </div>
