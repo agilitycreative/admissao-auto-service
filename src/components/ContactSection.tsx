@@ -67,7 +67,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
       {/* Container do Mapa */}
       <div className="relative w-full h-96 sm:h-full">
         <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=17gmyxkquP9i_jkVcIY1CNFZjM7vihNk&ehbc=2E312F&noprof=1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0476839971043!2d-38.50079142467257!3d-3.7997603961740634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74f764ae78f89%3A0x238dd9e3b912a86b!2sAv.%20Desembargador%20Gonzaga%2C%201581%20-%20Cidade%20dos%20Funcion%C3%A1rios%2C%20Fortaleza%20-%20CE%2C%2060824-062!5e0!3m2!1spt-PT!2sbr!4v1751462857859!5m2!1spt-PT!2sbr"
           width="100%"
           height="100%"
           loading="lazy"
