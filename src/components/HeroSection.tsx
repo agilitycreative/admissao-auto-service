@@ -18,18 +18,33 @@ interface HeroSectionProps {
 
 const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <section id={id} className="-mx-4 w-[100vw] max-w-none h-[500px] md:h-[686px]">
+    <section
+      id={id}
+      className="-mx-4 w-[100vw] max-w-none h-[500px] md:h-[686px]"
+    >
       {/* Preload da imagem principal para LCP */}
       <Image
-        src="/images/hero-img.png"
+        src="/images/hero-img.jpg"
         alt="Hero background"
         fill
         className="hidden"
         priority
       />
-      <div className="w-full h-[500px] md:h-[686px] pt-20 md:pt-0 flex flex-col sm:justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
-        <div className="absolute md:flex bg-transparent w-full h-20"> </div>
-        <div className="mx-auto h-full justify-center sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] 2xl:max-w-[1440px] flex flex-col gap-6">
+      {/* Overlay de gradiente escuro */}
+      <div className="pointer-events-none absolute inset-0 z-10 w-full h-full" />
+      <div className="w-full h-[500px] md:h-[686px] pt-20 md:pt-0 flex flex-col sm:justify-between bg-[url('/images/hero-img.jpg')] bg-cover bg-[50%_50%] relative">
+        {/* Overlay de máscara */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2) 90%, rgba(0,0,0,0))",
+          }}
+        />
+        <div className="absolute md:flex bg-transparent w-full h-20 z-10">
+          {" "}
+        </div>
+        <div className="mx-auto h-full justify-center sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] 2xl:max-w-[1440px] flex flex-col gap-6 z-10">
           <h1 className="w-full max-w-[424px] text-center md:text-left font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
           </h1>

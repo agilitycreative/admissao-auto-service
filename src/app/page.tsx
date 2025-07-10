@@ -100,21 +100,12 @@ export default function Home() {
   const locations = [
     {
       id: 1,
-      name: "Admissão Sapiranga",
+      name: "Admissão Cidade dos funcionários",
       description:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
-      address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
-      phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
-    },
-    {
-      id: 2,
-      name: "Admissão Guararapes",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
-      address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
-      phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
+      address: "Av. Desembargador Gonzaga, 158",
+      phone: "(85) 9 9609-3955",
+      image: "/images/us-unity-img.jpg",
     },
   ];
 
@@ -156,12 +147,6 @@ export default function Home() {
       id: 2,
       title: "Cidade dos Funcionários",
       details: "Av. Desembargador Gonzaga, 158\n(85) 9 9609-3955",
-      icon: <LuHouse className="size-6" />,
-    },
-    {
-      id: 3,
-      title: "Sapiranga",
-      details: "Av. Presidente Arthur Bernardes, 2116\n(85) 9 9609-3955",
       icon: <LuHouse className="size-6" />,
     },
   ];

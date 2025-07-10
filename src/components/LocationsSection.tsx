@@ -43,15 +43,17 @@ const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
         {locations.map((location) => (
           <Card
             key={location.id}
-            className="md:flex-1 w-full rounded-lg overflow-hidden"
+            className="md:flex-1 w-full rounded-lg overflow-hidden max-w-[400px]"
           >
-            <Image
-              className="w-full h-[210px] object-cover"
-              alt={location.name}
-              src={location.image}
-              width={400}
-              height={210}
-            />
+            <div className="w-full flex justify-center items-start bg-black">
+              <Image
+                className="w-full h-[210px] object-cover max-w-[400px]"
+                alt={location.name}
+                src={location.image}
+                width={400}
+                height={210}
+              />
+            </div>
             <CardContent className="flex flex-col gap-2.5 p-5 bg-primary-dark rounded-[0px_0px_10px_10px]">
               <h3 className="font-sans font-semibold text-primary-contrast text-sm sm:text-base tracking-[0.25px] leading-5">
                 {location.name}
