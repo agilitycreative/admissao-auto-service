@@ -105,7 +105,7 @@ export default function Home() {
         "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
       address: "Av. Desembargador Gonzaga, 158",
       phone: "(85) 9 9609-3955",
-      image: "/images/us-unity-img.jpg",
+      image: "/images/us-unity-img.jpeg",
     },
   ];
 

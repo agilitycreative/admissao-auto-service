@@ -17,7 +17,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
         <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
           <Image
-            src="/images/about-us-long-img.jpg"
+            src="/images/about-us-long-img.jpeg"
             alt="Sobre nós"
             fill
             className="object-cover"
@@ -36,7 +36,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
           </div>
           <div className="flex-1 w-[250px] h-[220px] shadow-md relative rounded overflow-hidden">
             <Image
-              src="/images/about-us-short-img-2.jpg"
+              src="/images/about-us-short-img-2.jpeg"
               alt="Sobre nós 2"
               fill
               className="object-cover"

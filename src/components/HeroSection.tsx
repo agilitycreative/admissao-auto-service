@@ -24,7 +24,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
     >
       {/* Preload da imagem principal para LCP */}
       <Image
-        src="/images/hero-img.jpg"
+        src="/images/hero-img.jpeg"
         alt="Hero background"
         fill
         className="hidden"
@@ -32,7 +32,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
       />
       {/* Overlay de gradiente escuro */}
       <div className="pointer-events-none absolute inset-0 z-10 w-full h-full" />
-      <div className="w-full h-[500px] md:h-[686px] pt-20 md:pt-0 flex flex-col sm:justify-between bg-[url('/images/hero-img.jpg')] bg-cover bg-[50%_50%] relative">
+      <div className="w-full h-[500px] md:h-[686px] pt-20 md:pt-0 flex flex-col sm:justify-between bg-[url('/images/hero-img.jpeg')] bg-cover bg-[50%_50%] relative">
         {/* Overlay de máscara */}
         <div
           className="absolute inset-0 z-0 pointer-events-none"
