@@ -20,7 +20,7 @@ interface LocationsSectionProps {
 
 const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
   <section id={id} className="w-full py-[50px]">
-    <div className="max-w-[956px] 2xl:max-w-[1440px] mx-auto flex flex-col gap-12">
+    <div className="max-w-[956px] 2xl:max-w-[1280px] mx-auto flex flex-col gap-12">
       <div className="relative">
         <Image
           src={"/images/vector.svg"}

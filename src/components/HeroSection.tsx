@@ -44,7 +44,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
         <div className="absolute md:flex bg-transparent w-full h-20 z-10">
           {" "}
         </div>
-        <div className="mx-auto h-full justify-center sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] 2xl:max-w-[1440px] flex flex-col gap-6 z-10">
+        <div className="mx-auto h-full justify-center sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] 2xl:max-w-[1280px] flex flex-col gap-6 z-10">
           <h1 className="w-full max-w-[424px] text-center md:text-left font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
           </h1>
@@ -69,8 +69,8 @@ const HeroSection = ({ id }: HeroSectionProps) => {
           </a>
         </div>
 
-        <Card className="hidden sm:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-10 border-none rounded-none">
-          <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1440px] justify-between mx-auto items-start p-0">
+        <Card className="hidden md:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-10 border-none rounded-none">
+          <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1280px] justify-between mx-auto items-start p-0">
             {/* Horário de funcionamento */}
             <div className="flex items-center gap-5">
               <FaRegClock className="w-6 h-6 text-primary-contrast" />

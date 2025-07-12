@@ -67,7 +67,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
   }
 
   return (
-    <section id={id} className="w-full max-w-[954px] 2xl:max-w-[1440px]">
+    <section id={id} className="w-full max-w-[954px] 2xl:max-w-[1280px]">
       <div className="flex flex-col items-center gap-12 py-2.5">
         <div className="flex flex-col items-center gap-24 w-full">
           <div className="w-full relative">
@@ -122,7 +122,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
                 value={category.id}
                 className="flex flex-col items-center justify-center rounded-[0px_0px_10px_10px] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,1)_0%,rgba(221,221,221,1)_100%)]"
               >
-                <div className="w-full max-w-[954px] 2xl:max-w-[1440px] max-h-[330px] mx-auto">
+                <div className="w-full max-w-[954px] 2xl:max-w-[1280px] max-h-[330px] mx-auto">
                   <div className="w-full h-[200px] sm:h-[250px] md:h-[330px] 2xl:px-48 bg-[url(/images/car-services.png)] bg-contain bg-center bg-no-repeat relative">
                     <ServiceIcons />
                   </div>

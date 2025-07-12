@@ -72,7 +72,7 @@ const Frame = (): React.ReactElement => {
   return (
     <div
       className={`
-        z-50 flex flex-col md:flex-row max-w-[954px] 2xl:max-w-[1440px] w-[calc(100%-20px)] md:w-[calc(100%-64px)]
+        z-50 flex flex-col md:flex-row max-w-[954px] 2xl:max-w-[1280px] w-[calc(100%-20px)] md:w-[calc(100%-64px)]
         justify-between p-5 bg-[#000000c2] items-center
         fixed left-1/2 -translate-x-1/2
         ${showHeader ? "translate-y-0 top-6" : "-translate-y-full"}
