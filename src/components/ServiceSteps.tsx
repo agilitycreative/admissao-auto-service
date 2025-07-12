@@ -31,7 +31,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
-        <div className="flex flex-wrap justify-center w-full max-w-lg lg:max-w-none mx-auto gap-1 sm:gap-2 md:gap-5">
+        <div className="flex flex-wrap justify-center w-full max-w-lg lg:max-w-none 2xl:justify-between mx-auto gap-1 sm:gap-2 md:gap-5">
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
               <div className="flex flex-col items-center gap-3 min-w-[140px] max-w-[150px] w-full">
