@@ -97,7 +97,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
                   <TabsTrigger
                     key={category.id}
                     value={category.id}
-                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 h-48 rounded-none min-w-[150px] max-w-[200px]`}
+                    className={`flex-1 flex flex-col items-center gap-4 py-5 px-0 h-48 rounded-none min-w-[150px] max-w-[200px] 2xl:min-w-0 2xl:max-w-none`}
                   >
                     <div className="flex flex-col items-center">
                       <div
