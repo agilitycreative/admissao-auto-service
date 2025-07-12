@@ -24,9 +24,9 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
     <div className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
       {/* Container da Caixa de Texto (em desktop, vira um overlay) */}
       <div className="w-full sm:absolute sm:inset-0 sm:z-10">
-        <div className="h-full max-w-[954px] 2xl:max-w-[1280px] mx-auto sm:relative">
+        <div className="h-full max-w-[954px] 2xl:max-w-[1280px] mx-auto sm:relative sm:flex sm:justify-end">
           {/* Caixa de Texto */}
-          <div className="w-full sm:w-[300px] sm:h-full bg-secondary-dark bg-opacity-90 py-6 px-8">
+          <div className="w-full sm:w-[333px] sm:h-full bg-secondary-dark bg-opacity-90 py-6 px-8">
             <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10">
               FALE CONOSCO
             </h2>
