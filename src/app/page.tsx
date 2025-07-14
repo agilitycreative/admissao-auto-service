@@ -4,7 +4,6 @@ import PartnerLogos from "@/components/PartnerLogos";
 import AboutUsSection from "@/components/AboutUsSection";
 import ServicesTabs from "@/components/ServicesTabs";
 const ServiceSteps = dynamic(() => import("@/components/ServiceSteps"));
-const LocationsSection = dynamic(() => import("@/components/LocationsSection"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 const Footer = dynamic(() => import("@/components/Footer"));
 import ContactSection from "@/components/ContactSection";
@@ -15,6 +14,7 @@ import { FaCarSide, FaOilCan, FaTools } from "react-icons/fa";
 import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
 import { LuHouse } from "react-icons/lu";
+import InstagramTimelineSection from "@/components/InstagramTimelineSection";
 
 export default function Home() {
   const partnerLogos = [
@@ -97,18 +97,6 @@ export default function Home() {
     },
   ];
 
-  const locations = [
-    {
-      id: 1,
-      name: "Admissão Cidade dos funcionários",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
-      address: "Av. Desembargador Gonzaga, 158",
-      phone: "(85) 9 9609-3955",
-      image: "/images/us-unity-img.jpeg",
-    },
-  ];
-
   const faqItems = [
     {
       id: "item-1",
@@ -159,7 +147,7 @@ export default function Home() {
       <AboutUsSection id="sobre" />
       <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
       <ServiceSteps serviceSteps={serviceSteps} />
-      <LocationsSection id="localizacoes" locations={locations} />
+      <InstagramTimelineSection id="instagram" />
       <FAQSection id="faq" faqItems={faqItems} />
       <div className="w-full">
         <ContactSection id="contato" contactInfo={contactInfo} />
