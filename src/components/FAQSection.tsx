@@ -32,7 +32,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
   >
     <div className="flex-1 flex flex-col gap-10">
       <div className="flex flex-col gap-2">
-        <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">
+        <h2 className="font-sans font-extrabold text-primary text-2xl sm:text-3xl leading-10">
           PERGUNTAS FREQUENTES
         </h2>
         <p className="font-sans font-normal text-primary tracking-wider text-xs sm:text-sm w-full">

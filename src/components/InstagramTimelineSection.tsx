@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface InstagramTimelineSectionProps {
   id?: string;
@@ -7,9 +8,18 @@ interface InstagramTimelineSectionProps {
 const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
   <section id={id} className="w-full flex flex-col items-center">
     <div className="w-full max-w-[954px] 2xl:max-w-[1280px] mx-auto flex flex-col items-center">
-      <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10 mb-4">
-        Acompanhe nosso Instagram
-      </h2>
+      <div className="w-full relative flex flex-col items-start mb-4">
+        <Image
+          src={"/images/vector.svg"}
+          alt="admissao vector"
+          width={420}
+          height={206}
+          className="absolute -left-32 md:-left-60 -top-10"
+        />
+        <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
+          ACOMPANHE NOSSO INSTAGRAM
+        </h2>
+      </div>
       <div className="w-full flex justify-center items-center rounded-none overflow-visible">
         <iframe
           src="https://www.instagram.com/admissaoautoservice/embed"
