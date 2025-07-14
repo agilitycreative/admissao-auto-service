@@ -32,7 +32,7 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
         href="https://www.instagram.com/admissaoautoservice/"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 text-primary underline text-sm"
+        className="mt-4 hidden md:flex text-primary underline text-sm"
       >
         Ver no Instagram
       </a>
