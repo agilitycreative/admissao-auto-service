@@ -69,7 +69,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
           </a>
         </div>
 
-        <Card className="hidden md:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-10 border-none rounded-none">
+        <Card className="hidden md:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-4 border-none rounded-none">
           <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1280px] justify-between mx-auto items-start p-0">
             {/* Horário de funcionamento */}
             <div className="flex items-center gap-5">
