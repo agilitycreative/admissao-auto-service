@@ -11,14 +11,13 @@ export default function Footer(): React.ReactElement {
           </p>
         </div>
 
-        <div className="flex items-center mr-24">
+        <div className="flex items-center mr-2 md:mr-36">
           <Image
             src="/images/agility-logo.png"
             alt="Agility Logo"
             height={32}
             width={100}
-            className="h-8 w-auto ml-4"
-            style={{ height: "2rem", width: "auto" }}
+            className="w-auto h-6 md:h-8"
             priority
           />
         </div>
