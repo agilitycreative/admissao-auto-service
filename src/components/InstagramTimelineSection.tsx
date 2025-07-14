@@ -27,7 +27,6 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
           width="100%"
           height="475"
           scrolling="no"
-          allowTransparency={true}
           className="w-full h-[475px] 2xl:h-[580px] border-none"
           style={{
             border: 0,

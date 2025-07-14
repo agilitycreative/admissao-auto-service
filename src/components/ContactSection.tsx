@@ -43,7 +43,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                 </div>
               ))}
             </div>
-            <a className="mt-4">
+            <div className="mt-4">
               <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10 mb-2">
                 REDES SOCIAIS
               </h2>
@@ -69,7 +69,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                   <FaFacebook style={{ fontSize: 28, color: "white" }} />
                 </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
