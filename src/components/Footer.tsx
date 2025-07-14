@@ -1,6 +1,5 @@
-import { BiLogoInstagramAlt } from "react-icons/bi";
-import { FaFacebook } from "react-icons/fa";
 import React from "react";
+import Image from "next/image";
 
 export default function Footer(): React.ReactElement {
   return (
@@ -12,13 +11,16 @@ export default function Footer(): React.ReactElement {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
-          <a href="#" aria-label="Instagram">
-            <BiLogoInstagramAlt style={{ fontSize: 24, color: "white" }} />
-          </a>
-          <a href="#" aria-label="Facebook">
-            <FaFacebook style={{ fontSize: 24, color: "white" }} />
-          </a>
+        <div className="flex items-center mr-24">
+          <Image
+            src="/images/agility-logo.png"
+            alt="Agility Logo"
+            height={32}
+            width={100}
+            className="h-8 w-auto ml-4"
+            style={{ height: "2rem", width: "auto" }}
+            priority
+          />
         </div>
       </div>
     </footer>

@@ -1,11 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { FaWhatsapp } from "react-icons/fa";
-import {
-  getWhatsAppLink,
-  WHATSAPP_PHONE,
-  WHATSAPP_DEFAULT_MESSAGE,
-} from "@/lib/utils";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaFacebook } from "react-icons/fa";
 
 type ContactInfo = {
   id: number;
@@ -48,16 +43,32 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                 </div>
               ))}
             </div>
-            <a
-              href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4"
-            >
-              <Button className="flex items-center text-xs sm:text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-auto">
-                ENTRAR EM CONTATO
-                <FaWhatsapp style={{ fontSize: 18 }} />
-              </Button>
+            <a className="mt-4">
+              <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10 mb-2">
+                REDES SOCIAIS
+              </h2>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.instagram.com/admissaoautoservice/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:opacity-80 transition"
+                >
+                  <BiLogoInstagramAlt
+                    style={{ fontSize: 28, color: "white" }}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/admissao.autoservicece?locale=pt_BR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="hover:opacity-80 transition"
+                >
+                  <FaFacebook style={{ fontSize: 28, color: "white" }} />
+                </a>
+              </div>
             </a>
           </div>
         </div>
