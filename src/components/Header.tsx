@@ -73,7 +73,7 @@ const Frame = (): React.ReactElement => {
     <div
       className={`
         z-50 flex flex-col md:flex-row max-w-[954px] 2xl:max-w-[1280px] w-[calc(100%-20px)] md:w-[calc(100%-64px)]
-        justify-between p-5 bg-[#000000c2] items-center
+        justify-between px-5 py-3 bg-[#000000e6] items-center
         fixed left-1/2 -translate-x-1/2
         ${showHeader ? "translate-y-0 top-6" : "-translate-y-full"}
         lg:absolute lg:translate-y-0
@@ -92,10 +92,10 @@ const Frame = (): React.ReactElement => {
       <div className="w-full flex items-center justify-between md:justify-start md:w-auto">
         <div className="inline-flex items-center gap-3 transition-all duration-300">
           <Image
-            className="w-[161px] h-6"
+            className="w-auto h-7 md:h-8"
             alt="Admissão logo symbol"
-            width={160}
-            height={24}
+            width={207.32}
+            height={32}
             src="/images/logo-marca-white.png"
           />
         </div>
