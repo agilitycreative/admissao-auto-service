@@ -5,7 +5,7 @@ interface InstagramTimelineSectionProps {
 }
 
 const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
-  <section id={id} className="w-full py-[50px] flex flex-col items-center">
+  <section id={id} className="w-full flex flex-col items-center">
     <div className="w-full max-w-[954px] 2xl:max-w-[1280px] mx-auto flex flex-col items-center">
       <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10 mb-4">
         Acompanhe nosso Instagram
@@ -15,13 +15,11 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
           src="https://www.instagram.com/admissaoautoservice/embed"
           title="Instagram Timeline"
           width="100%"
-          height="600"
-          frameBorder="0"
+          height="475"
           scrolling="no"
           allowTransparency={true}
-          className="w-full border-none"
+          className="w-full h-[475px] 2xl:h-[580px] border-none"
           style={{
-            minHeight: 500,
             border: 0,
             boxShadow: "none",
             borderRadius: 0,
