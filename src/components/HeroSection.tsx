@@ -3,42 +3,82 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FaRegClock } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
 
 import React from "react";
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  id?: string;
+}
+
+const HeroSection = ({ id }: HeroSectionProps) => {
   return (
-    <div className="-mx-4 w-[100vw] max-w-none h-[686px]">
-      <div className="w-full h-[686px] flex flex-col justify-between bg-[url('/images/hero-img.png')] bg-cover bg-[50%_50%] relative">
-        <div className="bg-transparent w-full h-20"> </div>
-        <div className="mx-auto p-4 items-start w-full max-w-[950px] flex flex-col gap-6">
-          <h1 className="w-full mt-4 md:mt-0 max-w-[424px] text-center md:text-left [font-family:'Montserrat-ExtraBold',Helvetica] font-extrabold text-primary-contrast text-2xl md:text-3xl tracking-[0] leading-[normal]">
+    <section
+      id={id}
+      className="-mx-4 w-[100vw] max-w-none h-[500px] md:h-[686px]"
+    >
+      {/* Preload da imagem principal para LCP */}
+      <Image
+        src="/images/hero-img.jpeg"
+        alt="Hero background"
+        fill
+        className="hidden"
+        priority
+      />
+      {/* Overlay de gradiente escuro */}
+      <div className="pointer-events-none absolute inset-0 z-10 w-full h-full" />
+      <div className="w-full h-[500px] md:h-[686px] pt-20 md:pt-0 flex flex-col sm:justify-between bg-[url('/images/hero-img.jpeg')] bg-cover bg-[50%_50%] relative">
+        {/* Overlay de máscara */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2) 90%, rgba(0,0,0,0))",
+          }}
+        />
+        <div className="absolute md:flex bg-transparent w-full h-20 z-10">
+          {" "}
+        </div>
+        <div className="mx-auto h-full justify-center sm:h-auto p-4 sm:mt-36 items-start w-full max-w-[950px] 2xl:max-w-[1280px] flex flex-col gap-6 z-10">
+          <h1 className="w-full max-w-[424px] text-center md:text-left font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl tracking-[0] leading-[normal]">
             Sua oficina mecânica de confiança em Fortaleza!
           </h1>
 
-          <p className="max-w-[490px] text-center md:text-left [font-family:'Montserrat-Medium',Helvetica] font-medium text-primary-contrast text-sm tracking-normal leading-normal">
+          <p className="max-w-[490px] text-center md:text-left font-medium font-sans text-primary-contrast text-sm tracking-normal leading-normal">
             Especialistas em manutenção automotiva com mais de 15 anos de
             experiência. Qualidade, confiança e atendimento personalizado.
           </p>
 
-          <Button className="inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-green rounded-[100px] h-auto w-full md:w-auto self-center md:self-start">
-            <span className="relative w-fit mt-0 [font-family:'Montserrat-SemiBold',Helvetica] font-semibold text-primary-contrast text-sm tracking-normal leading-normal">
-              ENTRAR EM CONTATO
-            </span>
-            <FaWhatsapp style={{ fontSize: 18, color: "white" }} />
-          </Button>
+          <a
+            href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto self-center md:self-start"
+          >
+            <Button className="mt-16 sm:mt-0 inline-flex items-center justify-center gap-2.5 px-5 py-4 bg-accent-greenDark rounded-[100px] h-auto w-full md:w-auto">
+              <span className="relative w-fit mt-0 font-sans font-bold shadow-sm text-primary-contrast text-xs sm:text-sm tracking-normal leading-normal">
+                ENTRAR EM CONTATO
+              </span>
+              <FaWhatsapp className="w-[18px] h-[18px] text-primary-contrast" />
+            </Button>
+          </a>
         </div>
 
-        <Card className="bg-secondary-overlay w-full items-center justify-center gap-2.5 px-5 py-0 md:py-10 border-none rounded-none">
-          <CardContent className="flex flex-col sm:flex-row w-full max-w-[952px] mx-auto items-start gap-6 sm:gap-8 md:gap-20 p-0">
+        <Card className="hidden md:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-4 border-none rounded-none">
+          <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1280px] justify-between mx-auto items-start p-0">
             {/* Horário de funcionamento */}
             <div className="flex items-center gap-5">
-              <FaRegClock style={{ fontSize: 24, color: "white" }} />
+              <FaRegClock className="w-6 h-6 text-primary-contrast" />
               <div>
-                <h3 className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-sm">
+                <h2 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Horário de funcionamento
-                </h3>
-                <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm">
+                </h2>
+                <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Segunda - Sexta
                   <br />
                   08:30 as 18:00
@@ -47,13 +87,13 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Cidade dos Funcionários */}
-            <div className="flex items-start gap-5">
-              <GoHome style={{ fontSize: 24, color: "white" }} />
+            <div className="flex items-center gap-5">
+              <GoHome className="w-6 h-6 text-primary-contrast" />
               <div>
-                <h3 className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-sm">
+                <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Cidade dos Funcionários
                 </h3>
-                <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm">
+                <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Av. Desembargador Gonzaga, 158
                   <br />
                   (85) 9 9609-3955
@@ -62,13 +102,13 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Sapiranga */}
-            <div className="flex items-start gap-5">
-              <GoHome style={{ fontSize: 24, color: "white" }} />
+            <div className="flex items-center gap-5">
+              <GoHome className="w-6 h-6 text-primary-contrast" />
               <div>
-                <h3 className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-sm">
+                <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
                   Sapiranga
                 </h3>
-                <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm">
+                <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Av. Presidente Arthur Bernardes, 2116
                   <br />
                   (85) 9 9609-3955
@@ -78,7 +118,7 @@ const HeroSection: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
 

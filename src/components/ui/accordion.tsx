@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface AccordionContextType {
   openItems: string[];
@@ -20,7 +21,7 @@ interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 type AccordionChild = React.ReactElement<{
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
 }>;
 
@@ -81,7 +82,7 @@ export function AccordionItem({
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child as AccordionChild, {
-              accordionValue: value,
+              accordionvalue: value,
               isOpen,
             })
           : child
@@ -92,13 +93,13 @@ export function AccordionItem({
 
 interface AccordionTriggerProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
   children: React.ReactNode;
 }
 
 export function AccordionTrigger({
-  accordionValue,
+  accordionvalue,
   isOpen,
   children,
   className,
@@ -114,24 +115,24 @@ export function AccordionTrigger({
         className
       )}
       aria-expanded={isOpen}
-      onClick={() => accordionValue && ctx.onToggle(accordionValue)}
+      onClick={() => accordionvalue && ctx.onToggle(accordionvalue)}
       {...props}
     >
       {children}
       <span
         className={cn(
-          "ml-2 transition-transform",
-          isOpen ? "rotate-90" : "rotate-0"
+          "ml-2 transition-transform duration-300 ease-in-out",
+          isOpen ? "rotate-180" : "rotate-0"
         )}
       >
-        ▶
+        <MdKeyboardArrowDown className="w-5 h-5" />
       </span>
     </button>
   );
 }
 
 interface AccordionContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  accordionValue?: string;
+  accordionvalue?: string;
   isOpen?: boolean;
   children: React.ReactNode;
 }
@@ -142,9 +143,16 @@ export function AccordionContent({
   className,
   ...props
 }: AccordionContentProps) {
-  if (!isOpen) return null;
   return (
-    <div className={cn("py-2", className)} {...props}>
+    <div
+      className={cn(
+        "overflow-hidden transition-all duration-300 ease-in-out py-2",
+        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+        className
+      )}
+      aria-hidden={!isOpen}
+      {...props}
+    >
       {children}
     </div>
   );

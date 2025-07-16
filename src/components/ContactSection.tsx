@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { FaFacebook } from "react-icons/fa";
 
 type ContactInfo = {
   id: number;
@@ -11,52 +10,80 @@ type ContactInfo = {
 };
 
 interface ContactSectionProps {
+  id?: string;
   contactInfo: ContactInfo[];
 }
 
-const ContactSection: React.FC<ContactSectionProps> = ({ contactInfo }) => (
-  <section className="-mx-4 w-[100vw] max-w-none">
-    <div className="flex flex-col-reverse sm:relative w-full sm:h-[440px]">
-      {/* Container para respeitar max-width */}
-      <div className="w-full max-w-[954px] mx-auto relative">
-        {/* Caixa de texto */}
-        <div className="w-full sm:w-[300px] z-50 h-auto sm:h-[440px] bg-secondary-dark bg-opacity-90 py-6 px-8 sm:absolute sm:top-0 sm:left-0 sm:mx-0 sm:my-0">
-          <h2 className="font-['Montserrat-Bold'] font-bold text-primary-contrast text-2xl leading-10">
-            FALE CONOSCO
-          </h2>
-          <div className="flex flex-col pt-2 gap-8 w-full sm:w-[241px]">
-            {contactInfo.map((info) => (
-              <div
-                key={info.id}
-                className="flex items-center gap-5 text-primary-contrast"
-              >
-                {info.icon}
-                <div className="flex flex-col">
-                  <h3 className="font-['Montserrat-SemiBold'] font-semibold text-sm">
-                    {info.title}
-                  </h3>
-                  <p className="font-['Montserrat-Regular'] font-normal text-sm whitespace-pre-line">
-                    {info.details}
-                  </p>
+const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
+  <section id={id} className="-mx-4 w-[100vw] max-w-none">
+    <div className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
+      {/* Container da Caixa de Texto (em desktop, vira um overlay) */}
+      <div className="w-full sm:absolute sm:inset-0 sm:z-10">
+        <div className="h-full max-w-[954px] 2xl:max-w-[1280px] mx-auto sm:relative sm:flex sm:justify-end">
+          {/* Caixa de Texto */}
+          <div className="w-full sm:w-[333px] sm:h-full bg-secondary-dark bg-opacity-90 py-6 px-8">
+            <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10">
+              FALE CONOSCO
+            </h2>
+            <div className="flex flex-col pt-2 pb-6 gap-8 w-full sm:w-[241px]">
+              {contactInfo.map((info) => (
+                <div
+                  key={info.id}
+                  className="flex items-center gap-5 text-primary-contrast"
+                >
+                  {info.icon}
+                  <div className="flex flex-col">
+                    <h3 className="font-semibold font-sans text-xs sm:text-sm">
+                      {info.title}
+                    </h3>
+                    <p className="font-normal font-sans text-xs sm:text-sm whitespace-pre-line">
+                      {info.details}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <h2 className="font-bold font-sans text-primary-contrast text-xl sm:text-2xl leading-10 mb-2">
+                REDES SOCIAIS
+              </h2>
+              <div className="flex gap-4">
+                <a
+                  href="https://www.instagram.com/admissaoautoservice/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:opacity-80 transition"
+                >
+                  <BiLogoInstagramAlt
+                    style={{ fontSize: 28, color: "white" }}
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/admissao.autoservicece?locale=pt_BR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="hover:opacity-80 transition"
+                >
+                  <FaFacebook style={{ fontSize: 28, color: "white" }} />
+                </a>
               </div>
-            ))}
+            </div>
           </div>
-          <Button className="flex mt-8 items-center text-sm justify-center gap-2.5 rounded-full border border-white bg-transparent text-primary-contrast w-full sm:w-[201px]">
-            ENVIAR MENSAGEM
-            <FaWhatsapp style={{ fontSize: 18 }} />
-          </Button>
         </div>
       </div>
-      {/* Imagem */}
-      <div className="relative w-full h-96 md:h-[200px] sm:h-full md:mt-4 sm:mt-0">
-        <Image
-          src="/images/maps.png"
-          alt="Contact background"
-          width={800}
-          height={200}
-          className="object-cover w-full h-full sm:fill sm:absolute sm:inset-0"
-          priority
+
+      {/* Container do Mapa */}
+      <div className="relative w-full h-96 sm:h-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0476839971043!2d-38.50079142467257!3d-3.7997603961740634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74f764ae78f89%3A0x238dd9e3b912a86b!2sAv.%20Desembargador%20Gonzaga%2C%201581%20-%20Cidade%20dos%20Funcion%C3%A1rios%2C%20Fortaleza%20-%20CE%2C%2060824-062!5e0!3m2!1spt-PT!2sbr!4v1751462857859!5m2!1spt-PT!2sbr"
+          width="100%"
+          height="100%"
+          loading="lazy"
+          style={{ border: 0, minHeight: 300, borderRadius: 8 }}
+          allowFullScreen={true}
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
     </div>

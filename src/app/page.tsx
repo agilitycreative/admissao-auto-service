@@ -1,19 +1,20 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
 import PartnerLogos from "@/components/PartnerLogos";
 import AboutUsSection from "@/components/AboutUsSection";
 import ServicesTabs from "@/components/ServicesTabs";
-import ServiceSteps from "@/components/ServiceSteps";
-import LocationsSection from "@/components/LocationsSection";
-import FAQSection from "@/components/FAQSection";
+const ServiceSteps = dynamic(() => import("@/components/ServiceSteps"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 import ContactSection from "@/components/ContactSection";
 import React from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { BiSolidZap } from "react-icons/bi";
 import { FaCarSide, FaOilCan, FaTools } from "react-icons/fa";
 import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
 import { LuHouse } from "react-icons/lu";
+import InstagramTimelineSection from "@/components/InstagramTimelineSection";
 
 export default function Home() {
   const partnerLogos = [
@@ -96,27 +97,6 @@ export default function Home() {
     },
   ];
 
-  const locations = [
-    {
-      id: 1,
-      name: "Admissão Sapiranga",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
-      address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
-      phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
-    },
-    {
-      id: 2,
-      name: "Admissão Guararapes",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.",
-      address: "Lorem ipsum dolor sit, 2900 - Sapiranga",
-      phone: "(85) 9 9837-2938 | 3390-2039",
-      image: "/images/us-unity-img.png",
-    },
-  ];
-
   const faqItems = [
     {
       id: "item-1",
@@ -157,26 +137,20 @@ export default function Home() {
       details: "Av. Desembargador Gonzaga, 158\n(85) 9 9609-3955",
       icon: <LuHouse className="size-6" />,
     },
-    {
-      id: 3,
-      title: "Sapiranga",
-      details: "Av. Presidente Arthur Bernardes, 2116\n(85) 9 9609-3955",
-      icon: <LuHouse className="size-6" />,
-    },
   ];
 
   return (
-    <div className="flex flex-col items-center w-full gap-12 md:gap-20 px-4">
+    <div className="flex flex-col items-center w-full gap-16 md:gap-20 px-4">
       <Header />
-      <HeroSection />
+      <HeroSection id="inicio" />
       <PartnerLogos partnerLogos={partnerLogos} />
-      <AboutUsSection />
-      <ServicesTabs serviceCategories={serviceCategories} />
+      <AboutUsSection id="sobre" />
+      <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
       <ServiceSteps serviceSteps={serviceSteps} />
-      <LocationsSection locations={locations} />
-      <FAQSection faqItems={faqItems} />
+      <InstagramTimelineSection id="instagram" />
+      <FAQSection id="faq" faqItems={faqItems} />
       <div className="w-full">
-        <ContactSection contactInfo={contactInfo} />
+        <ContactSection id="contato" contactInfo={contactInfo} />
         <Footer />
       </div>
     </div>

@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "m3-body-medium": "var(--m3-body-medium-font-family)",
         sans: [
+          "Montserrat",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -18,6 +18,7 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        "m3-body-medium": "var(--m3-body-medium-font-family)",
       },
       colors: {
         primary: {

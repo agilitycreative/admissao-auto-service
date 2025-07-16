@@ -21,34 +21,34 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
       height={206}
       className="absolute right-40 top-10 z-50 brightness-200 opacity-100 mix-blend-screen"
     />
-    <div className="max-w-[954px] mx-auto ">
+    <div className="max-w-[954px] 2xl:max-w-[1280px] mx-auto ">
       <div className="flex flex-col gap-7">
         <div className="relative p-4">
-          <h2 className="font-['Roboto-ExtraBold'] font-extrabold text-primary-contrast text-2xl md:text-3xl leading-10">
+          <h2 className="font-extrabold font-sans text-primary-contrast text-xl sm:text-2xl md:text-3xl leading-10">
             ETAPAS DO ATENDIMENTO
           </h2>
-          <p className="font-['Montserrat-Regular'] font-normal text-primary-contrast text-sm tracking-wide leading-5">
+          <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm tracking-wide leading-5">
             Conheça um pouco do nosso processo de atendimento
           </p>
         </div>
-        <div className="flex flex-wrap items-center justify-center w-full gap-2 md:gap-5">
+        <div className="flex flex-wrap justify-center w-full max-w-lg lg:max-w-none 2xl:justify-between mx-auto gap-1 sm:gap-2 md:gap-5">
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
-              <div className="flex flex-col items-center gap-3 w-full min-w-[120px] max-w-[150px]">
+              <div className="flex flex-col items-center gap-3 min-w-[140px] max-w-[150px] w-full">
                 <div className="flex items-center justify-center text-[#393939]">
                   {step.icon}
                 </div>
-                <div className="font-['Montserrat-SemiBold'] font-semibold text-primary-contrast text-xs text-center tracking-wide leading-5">
+                <div className="font-semibold font-sans text-primary-contrast text-[11px] sm:text-xs text-center tracking-wide leading-5">
                   {step.title}
                   <br />
-                  <span className="font-light italic text-xs block h-4">
+                  <span className="font-light italic text-[11px] sm:text-xs block h-4 font-sans">
                     {step.subtitle || "\u00A0"}
                   </span>
                 </div>
               </div>
               {index < serviceSteps.length - 1 && (
                 <Image
-                  className="w-2.5 h-2.5 hidden md:inline"
+                  className="w-2.5 h-2.5 hidden lg:inline"
                   alt="Arrow"
                   src="/images/arrow.png"
                   width={10}
