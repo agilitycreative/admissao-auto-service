@@ -62,7 +62,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
       </div>
       <div
         className="relative bg-cover rounded-md bg-center bg-no-repeat flex flex-col h-[436px] md:h-[436px] justify-between order-1 md:order-2"
-        style={{ backgroundImage: "url('/images/faq-img.jpeg')" }}
+        style={{ backgroundImage: "url('/images/faq-img.jpg')" }}
       >
         <div className="inset-0 bg-black/50 rounded-md z-5 absolute w-full h-full" />
         <div className="z-10 p-6">
