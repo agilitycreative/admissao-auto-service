@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import FadeInView from "./animations/FadeInView";
 
 type Location = {
   id: number;
@@ -20,7 +21,7 @@ interface LocationsSectionProps {
 
 const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
   <section id={id} className="w-full py-[50px]">
-    <div className="max-w-[956px] 2xl:max-w-[1280px] mx-auto flex flex-col gap-12">
+    <FadeInView className="max-w-[956px] 2xl:max-w-[1280px] mx-auto flex flex-col gap-12">
       <div className="relative">
         <Image
           src={"/images/vector.svg"}
@@ -87,7 +88,7 @@ const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
           </Card>
         ))}
       </div>
-    </div>
+    </FadeInView>
   </section>
 );
 

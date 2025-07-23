@@ -9,6 +9,7 @@ import {
   useTabs,
 } from "@/components/ui/tabs";
 import Image from "next/image";
+import FadeInView from "./animations/FadeInView";
 
 type ServiceCategory = {
   id: string;
@@ -68,7 +69,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
 
   return (
     <section id={id} className="w-full max-w-[954px] 2xl:max-w-[1280px]">
-      <div className="flex flex-col items-center gap-12 py-2.5">
+      <FadeInView className="flex flex-col items-center gap-12 py-2.5">
         <div className="flex flex-col items-center gap-24 w-full">
           <div className="w-full relative">
             <Image
@@ -131,7 +132,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
             ))}
           </Tabs>
         </Card>
-      </div>
+      </FadeInView>
     </section>
   );
 };

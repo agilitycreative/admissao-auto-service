@@ -2,6 +2,8 @@ import React from "react";
 import { IoCarSportOutline } from "react-icons/io5";
 import { TbCalendarTime } from "react-icons/tb";
 import { PiEngineBold } from "react-icons/pi";
+import FadeInView from "@/components/animations/FadeInView";
+
 import Image from "next/image";
 
 interface AboutUsSectionProps {
@@ -13,7 +15,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
     id={id}
     className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5"
   >
-    <div className="flex flex-col md:flex-row gap-3 lg:gap-12 2xl:gap-20 w-full">
+    <FadeInView className="flex flex-col md:flex-row gap-3 lg:gap-12 2xl:gap-20 w-full">
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
         <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
           <Image
@@ -108,7 +110,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
           </div>
         </div>
       </div>
-    </div>
+    </FadeInView>
   </section>
 );
 

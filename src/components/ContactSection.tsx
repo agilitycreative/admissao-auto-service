@@ -5,6 +5,7 @@ import {
   WHATSAPP_PHONE,
   WHATSAPP_DEFAULT_MESSAGE,
 } from "@/lib/utils";
+import FadeInView from "./animations/FadeInView";
 
 
 type ContactInfo = {
@@ -21,7 +22,7 @@ interface ContactSectionProps {
 
 const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
   <section id={id} className="-mx-4 w-[100vw] max-w-none">
-    <div className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
+    <FadeInView className="flex flex-col-reverse sm:block sm:relative sm:h-[440px]">
       {/* Container da Caixa de Texto (em desktop, vira um overlay) */}
       <div className="w-full sm:absolute sm:inset-0 sm:z-10">
         <div className="h-full max-w-[954px] 2xl:max-w-[1280px] mx-auto sm:relative sm:flex sm:justify-end">
@@ -101,7 +102,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-    </div>
+    </FadeInView>
   </section>
 );
 
