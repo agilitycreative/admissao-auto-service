@@ -11,7 +11,7 @@ export default function Footer(): React.ReactElement {
           </p>
         </div>
 
-        <a className="flex items-center mr-2 md:mr-[105px] cursor-pointer" target="_blank" href="https://www.agilitycreative.com/">
+        <a className="flex items-center mr-2 md:mr-[95px] cursor-pointer" target="_blank" href="https://www.agilitycreative.com/">
           <Image
             src="/images/agility-logo.png"
             alt="Agility Logo"
