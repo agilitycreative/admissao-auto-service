@@ -40,8 +40,6 @@ const Frame = (): React.ReactElement => {
     { name: "Início", href: "#inicio" },
     { name: "Sobre", href: "#sobre" },
     { name: "Serviços", href: "#servicos" },
-    { name: "Localizações", href: "#localizacoes" },
-    { name: "FAQ", href: "#faq" },
     { name: "Contato", href: "#contato" },
   ];
 

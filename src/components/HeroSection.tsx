@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FaRegClock } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import Image from "next/image";
 import {
   getWhatsAppLink,
@@ -70,7 +70,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
         </div>
 
         <Card className="hidden md:flex bg-secondary-overlay w-full items-center justify-center gap-1 py-0 md:py-4 border-none rounded-none">
-          <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1280px] justify-between mx-auto items-start p-0">
+          <CardContent className="flex w-full max-w-[952px] 2xl:max-w-[1280px] justify-between mx-auto items-center p-0">
             {/* Horário de funcionamento */}
             <div className="flex items-center gap-5">
               <FaRegClock className="w-6 h-6 text-primary-contrast" />
@@ -86,21 +86,6 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               </div>
             </div>
 
-            {/* Cidade dos Funcionários */}
-            <div className="flex items-center gap-5">
-              <GoHome className="w-6 h-6 text-primary-contrast" />
-              <div>
-                <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
-                  Cidade dos Funcionários
-                </h3>
-                <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
-                  Av. Desembargador Gonzaga, 158
-                  <br />
-                  (85) 9 9609-3955
-                </p>
-              </div>
-            </div>
-
             {/* Sapiranga */}
             <div className="flex items-center gap-5">
               <GoHome className="w-6 h-6 text-primary-contrast" />
@@ -111,9 +96,30 @@ const HeroSection = ({ id }: HeroSectionProps) => {
                 <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Av. Presidente Arthur Bernardes, 2116
                   <br />
-                  (85) 9 9609-3955
+                  +55 85 99609-3955
                 </p>
               </div>
+            </div>
+            {/* Social Midias */}
+            <div className="min-w-72 flex h-full items-center justify-center gap-10">
+              <a
+                href="https://www.instagram.com/admissaoautoservice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:opacity-80 transition"
+              >
+                <FaInstagram className="size-8 text-primary-contrast"></FaInstagram>
+              </a>
+              <a
+                href="https://www.facebook.com/admissao.autoservicece?locale=pt_BR"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="hover:opacity-80 transition"
+              >
+                <FaFacebook className="size-8 text-primary-contrast"></FaFacebook>
+              </a>
             </div>
           </CardContent>
         </Card>

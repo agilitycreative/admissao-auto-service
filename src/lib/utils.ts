@@ -11,6 +11,6 @@ export function getWhatsAppLink(phone: string, message: string) {
 }
 
 // Constantes para WhatsApp
-export const WHATSAPP_PHONE = "5585998372938"; // Exemplo: DDI+DDD+Número, sem espaços ou símbolos
+export const WHATSAPP_PHONE = "+5585996093955";
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Olá! Vim pelo site e gostaria de saber mais sobre os serviços da Admissão Auto Service.";
