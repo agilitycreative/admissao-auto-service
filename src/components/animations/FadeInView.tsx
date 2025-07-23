@@ -13,7 +13,7 @@ const FadeInView: React.FC<FadeInViewProps> = ({
   children, 
   delay = 0, 
   duration = 0.6,
-  className = "w-full flex items-center justify-center"
+  className = "w-full flex"
 }) => {
   return (
     <motion.div

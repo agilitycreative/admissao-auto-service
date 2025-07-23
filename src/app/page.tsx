@@ -15,7 +15,6 @@ import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
 import { LuHouse } from "react-icons/lu";
 import InstagramTimelineSection from "@/components/InstagramTimelineSection";
-import FadeInView from "@/components/FadeInView";
 
 export default function Home() {
   const partnerLogos = [
@@ -158,28 +157,21 @@ export default function Home() {
 
       <HeroSection id="inicio" />
 
-      <FadeInView>
-        <PartnerLogos partnerLogos={partnerLogos} />
-      </FadeInView>
-      <FadeInView>
-        <AboutUsSection id="sobre" />
-      </FadeInView>
-      <FadeInView>
-        <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
-      </FadeInView>
-      <FadeInView>
-        <ServiceSteps serviceSteps={serviceSteps} />
-      </FadeInView>
-      <FadeInView>
-        <InstagramTimelineSection id="instagram" />
-      </FadeInView>
-      <FadeInView>
-        <FAQSection id="faq" faqItems={faqItems} />
-      </FadeInView>
+      <PartnerLogos partnerLogos={partnerLogos} />
+
+      <AboutUsSection id="sobre" />
+
+      <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
+
+      <ServiceSteps serviceSteps={serviceSteps} />
+
+      <InstagramTimelineSection id="instagram" />
+
+      <FAQSection id="faq" faqItems={faqItems} />
+
       <div className="w-full">
-        <FadeInView>
-          <ContactSection id="contato" contactInfo={contactInfo} />
-        </FadeInView>
+        <ContactSection id="contato" contactInfo={contactInfo} />
+
         <Footer />
       </div>
     </div>

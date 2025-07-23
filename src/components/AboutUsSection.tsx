@@ -11,9 +11,9 @@ interface AboutUsSectionProps {
 const AboutUsSection = ({ id }: AboutUsSectionProps) => (
   <section
     id={id}
-    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] items-start gap-y-16 py-2.5"
+    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5"
   >
-    <div className="flex flex-col md:flex-row gap-6 md:gap-12 w-full">
+    <div className="flex flex-col md:flex-row gap-3 lg:gap-12 2xl:gap-20 w-full">
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
         <div className="w-full h-[213px] shadow-md relative rounded overflow-hidden">
           <Image

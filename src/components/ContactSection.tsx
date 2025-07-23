@@ -1,6 +1,11 @@
 import React from "react";
-import { BiLogoInstagramAlt } from "react-icons/bi";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
+
 
 type ContactInfo = {
   id: number;
@@ -55,7 +60,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                   aria-label="Instagram"
                   className="hover:opacity-80 transition"
                 >
-                  <BiLogoInstagramAlt
+                  <FaInstagram
                     style={{ fontSize: 28, color: "white" }}
                   />
                 </a>
@@ -67,6 +72,15 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
                   className="hover:opacity-80 transition"
                 >
                   <FaFacebook style={{ fontSize: 28, color: "white" }} />
+                </a>
+                <a
+                  href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="hover:opacity-80 transition"
+                >
+                  <FaWhatsapp style={{ fontSize: 28, color: "white" }} />
                 </a>
               </div>
             </div>
