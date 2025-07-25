@@ -10,7 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import React from "react";
 import Header from "@/components/Header";
 import { BiSolidZap } from "react-icons/bi";
-import { FaCarSide, FaOilCan, FaTools } from "react-icons/fa";
+import { FaCarSide, FaClipboardList, FaOilCan, FaRegCalendarAlt, FaSearch, FaTools } from "react-icons/fa";
 import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
 import { LuHouse } from "react-icons/lu";
@@ -83,23 +83,23 @@ export default function Home() {
     {
       id: 1,
       title: "Agende sua visita",
-      icon: <FaCarSide className="w-7 h-5" />,
+      icon: <FaRegCalendarAlt className="w-7 h-5" />,
     },
     {
       id: 2,
       title: "Análise do Veículo",
-      icon: <FaCarSide className="w-7 h-5" />,
+      icon: <FaSearch className="w-7 h-5" />,
     },
     {
       id: 3,
       title: "Entrega do Orçamento",
-      icon: <FaCarSide className="w-7 h-5" />,
+      icon: <FaClipboardList className="w-7 h-5" />,
     },
     {
       id: 4,
       title: "Realização do Serviços",
       subtitle: "Monitore com vídeos",
-      icon: <FaCarSide className="w-7 h-5" />,
+      icon: <FaTools className="w-7 h-5" />,
     },
     {
       id: 5,
@@ -112,27 +112,45 @@ export default function Home() {
   const faqItems = [
     {
       id: "item-1",
-      question: "Meu carro está estranhos ou com problemas, o que devo fazer?",
+      question: "Quais são os sinais de que meu carro precisa de revisão em Fortaleza?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..",
+        "Os principais sinais incluem: ruídos estranhos, vibrações anormais, consumo excessivo de combustível, luzes de alerta no painel, dificuldade para ligar e problemas nos freios. Em Fortaleza, devido ao clima quente e proximidade do mar, é importante ficar atento também a sinais de corrosão e funcionamento do ar condicionado. Recomendamos revisões preventivas a cada 10.000 km ou 6 meses para evitar problemas maiores.",
     },
     {
       id: "item-2",
-      question: "Meu carro está estranhos ou com problemas, o que devo fazer?",
+      question: "Quanto tempo dura em média uma revisão completa do carro?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..",
+        "O tempo de uma revisão completa pode variar de 2 a 4 horas, dependendo do modelo do veículo e dos serviços necessários. Na Admissão Auto Service, realizamos uma análise detalhada de mais de 50 itens do seu carro, incluindo parte elétrica, mecânica, suspensão e freios. Para sua comodidade, oferecemos serviço de acompanhamento em tempo real do status do serviço via WhatsApp.",
     },
     {
       id: "item-3",
-      question: "Meu carro está estranhos ou com problemas, o que devo fazer?",
+      question: "Por que é importante fazer alinhamento e balanceamento regularmente em Fortaleza?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..",
+        "Em Fortaleza, devido às condições das vias e ao clima, é essencial realizar alinhamento e balanceamento a cada 10.000 km. Estes serviços previnem o desgaste irregular dos pneus, melhoram a estabilidade do veículo, reduzem o consumo de combustível e aumentam a segurança. Ruas irregulares e lombadas podem desalinhar seu carro mais rapidamente, por isso a importância da manutenção regular.",
     },
     {
       id: "item-4",
-      question: "Meu carro está estranhos ou com problemas, o que devo fazer?",
+      question: "Qual a importância da troca de óleo e quando devo fazê-la?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..",
+        "A troca de óleo é fundamental para a saúde do motor do seu carro. Recomendamos a troca a cada 5.000 km para óleo mineral ou 10.000 km para óleo sintético. Na Admissão Auto Service, utilizamos óleos de alta qualidade e realizamos uma inspeção completa durante o serviço, verificando filtros, níveis e possíveis vazamentos. Um óleo em bom estado garante maior vida útil ao motor e melhor desempenho.",
+    },
+    {
+      id: "item-5",
+      question: "Como o clima de Fortaleza afeta meu carro e que cuidados devo ter?",
+      answer:
+        "O clima quente e a proximidade do mar em Fortaleza podem afetar diversos componentes do seu veículo. É importante manter o sistema de arrefecimento em dia, verificar regularmente a bateria (que tende a ter vida útil menor no calor), proteger a pintura contra a maresia e manter o ar condicionado sempre higienizado. Nossa oficina realiza check-ups específicos considerando estas características climáticas.",
+    },
+    {
+      id: "item-6",
+      question: "Quais são os serviços essenciais para preparar meu carro para uma viagem?",
+      answer:
+        "Antes de viajar, recomendamos uma revisão completa que inclui: verificação dos freios, alinhamento e balanceamento, checagem da suspensão, teste do sistema elétrico, análise dos fluidos (óleo, água, freio) e avaliação dos pneus incluindo o estepe. Na Admissão Auto Service, oferecemos um pacote específico de revisão pré-viagem que garante sua segurança na estrada.",
+    },
+    {
+      id: "item-7",
+      question: "Como funciona a garantia dos serviços realizados na oficina?",
+      answer:
+        "Todos os serviços realizados na Admissão Auto Service possuem garantia. Peças e componentes têm garantia de fábrica (variando de 3 meses a 1 ano, dependendo do fabricante), e nossa mão de obra tem garantia de 90 dias. Mantemos um registro detalhado de todos os serviços realizados e você recebe um certificado de garantia após cada serviço, podendo acionar nosso suporte técnico sempre que necessário.",
     },
   ];
 
@@ -152,7 +170,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center w-full gap-16 md:gap-20 px-4">
+    <div className="flex flex-col items-center w-full gap-16 md:gap-20">
       <Header />
 
       <HeroSection id="inicio" />

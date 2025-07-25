@@ -22,7 +22,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
   return (
     <section
       id={id}
-      className="-mx-4 w-[100vw] max-w-none h-[500px] md:h-[686px]"
+      className="w-full max-w-none h-[500px] md:h-[686px]"
     >
       {/* Preload da imagem principal para LCP */}
       <Image
