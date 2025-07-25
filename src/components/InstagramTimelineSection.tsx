@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import FadeInView from "./animations/FadeInView";
 
 interface InstagramTimelineSectionProps {
   id?: string;
@@ -7,7 +8,7 @@ interface InstagramTimelineSectionProps {
 
 const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
   <section id={id} className="w-full flex flex-col items-center">
-    <div className="w-full max-w-[954px] 2xl:max-w-[1280px] mx-auto flex flex-col items-center">
+    <FadeInView className="w-full max-w-[954px] 2xl:max-w-[1280px] mx-auto flex flex-col items-center">
       <div className="w-full relative flex flex-col items-start mb-4">
         <Image
           src={"/images/vector.svg"}
@@ -43,7 +44,7 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
       >
         Ver no Instagram
       </a>
-    </div>
+    </FadeInView>
   </section>
 );
 

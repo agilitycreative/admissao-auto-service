@@ -52,6 +52,10 @@ module.exports = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        scroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
@@ -60,6 +64,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: "scroll 30s linear infinite",
+
       },
     },
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
