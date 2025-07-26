@@ -170,7 +170,7 @@ export default function Home() {
       <FAQSection id="faq" faqItems={faqItems} />
 
       <div className="w-full">
-        <ContactSection id="contato" contactInfo={contactInfo} />
+        <ContactSection id="localizacao" contactInfo={contactInfo} />
 
         <Footer />
       </div>
