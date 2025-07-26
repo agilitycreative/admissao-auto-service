@@ -15,6 +15,11 @@ import { IoMdSettings, IoMdTime } from "react-icons/io";
 import { PiEngineFill } from "react-icons/pi";
 import { LuHouse } from "react-icons/lu";
 import InstagramTimelineSection from "@/components/InstagramTimelineSection";
+import {
+  getWhatsAppLink,
+  WHATSAPP_PHONE,
+  WHATSAPP_DEFAULT_MESSAGE,
+} from "@/lib/utils";
 
 export default function Home() {
   const partnerLogos = [
@@ -146,9 +151,29 @@ export default function Home() {
     {
       id: 2,
       title: "Sapiranga",
-      details: "Av. Presidente Arthur Bernardes, 2116\n +55 85 99609-3955",
+      details: (
+        <>
+          <a
+                    href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Arthur+Bernardes,+2116"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    Av. Presidente Arthur Bernardes, 2116
+                  </a> <br></br>
+          <a
+            href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            +55 85 99609-3955
+          </a>
+        </>
+      ),
       icon: <LuHouse className="size-6" />,
     },
+    
   ];
 
   return (
