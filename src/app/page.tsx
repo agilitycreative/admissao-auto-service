@@ -140,7 +140,7 @@ export default function Home() {
     {
       id: 1,
       title: "Horário de funcionamento",
-      details: "Segunda - Sexta\n08:30 as 18:00",
+      details: "Segunda - Sexta\n08:00 as 18:00",
       icon: <IoMdTime className="size-6" />,
     },
     {

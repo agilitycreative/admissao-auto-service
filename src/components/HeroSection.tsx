@@ -90,7 +90,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
                 <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Segunda - Sexta
                   <br />
-                  08:30 as 18:00
+                  08:00 as 18:00
                 </p>
               </div>
             </FadeInView>
