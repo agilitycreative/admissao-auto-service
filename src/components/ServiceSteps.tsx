@@ -14,7 +14,7 @@ interface ServiceStepsProps {
 }
 
 const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
-  <FadeInView className="-mx-4 w-[100vw] max-w-none relative bg-[linear-gradient(0deg,rgba(0,0,0,0.87)_0%,rgba(0,0,0,0.94)_100%),url('/images/steps-bg.jpg'),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] bg-cover bg-center bg-no-repeat pt-4 pb-12 md:py-24">
+  <FadeInView className="w-full max-w-none relative bg-[linear-gradient(0deg,rgba(0,0,0,0.87)_0%,rgba(0,0,0,0.94)_100%),url('/images/steps-bg.jpg'),linear-gradient(0deg,rgba(32,32,32,1)_0%,rgba(32,32,32,1)_100%)] bg-cover bg-center bg-no-repeat pt-4 pb-12 md:py-24">
     <Image
       src={"/images/vector.svg"}
       alt="admissao vector"
