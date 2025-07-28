@@ -13,7 +13,7 @@ interface AboutUsSectionProps {
 const AboutUsSection = ({ id }: AboutUsSectionProps) => (
   <section
     id={id}
-    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5 px-4 sm:px-0"
+    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5 px-4 lg:px-0"
   >
     <FadeInView className="flex flex-col md:flex-row gap-3 lg:gap-12 2xl:gap-20 w-full">
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">

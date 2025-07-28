@@ -7,7 +7,7 @@ interface InstagramTimelineSectionProps {
 }
 
 const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
-  <section id={id} className="w-full flex flex-col items-center px-4 sm:px-0">
+  <section id={id} className="w-full flex flex-col items-center px-4 lg:px-0">
     <FadeInView className="w-full max-w-[954px] 2xl:max-w-[1280px] mx-auto flex flex-col items-center">
       <div className="w-full relative flex flex-col items-start mb-4">
         <Image
