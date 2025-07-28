@@ -27,7 +27,7 @@ interface FAQSectionProps {
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
-  <section id={id}>
+  <section id={id} className="px-4 sm:px-0">
     <FadeInView className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] 2xl:max-w-[1280px] w-full">
       <div className="flex-1 flex flex-col gap-10">
         <div className="flex flex-col gap-2">
