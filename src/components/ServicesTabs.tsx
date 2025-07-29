@@ -87,9 +87,9 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
             </h2>
             <p className="font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 max-w-[590px] 2xl:max-w-full mt-2">
               Conheça alguns dos serviços que oferemos aqui na Admissão Auto
-              Service. Desde revisões de rotina até os problemas mais sérios de
-              motor, câmbio ou similar, conte sempre com a equipe especializada
-              de uma de nossas unidades em Fortaleza/CE.
+              Service. Seja para manutenção preventiva, correções pontuais ou
+              aquele check-up antes da viagem, conte com quem trata o seu carro
+              com o mesmo cuidado que você tem.
             </p>
           </div>
         </div>
