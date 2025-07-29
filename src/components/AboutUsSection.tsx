@@ -54,21 +54,31 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
             alt="admissao vector"
             width={420}
             height={206}
-            className="absolute -left-32 md:-left-60 -top-10"
+            className="absolute z-[-1] -left-32 md:-left-60 -top-10"
           />
           <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
             QUEM SOMOS
           </h2>
           <p className="font-normal font-sans text-primary tracking-wide leading-5 text-xs sm:text-sm">
-            Na Admissão Auto Service, somos movidos pela paixão por carros e
-            pelo compromisso com a satisfação dos nossos clientes. Atuando há
-            mais de 15 anos no mercado automotivo em Fortaleza, conquistamos a
-            confiança de quem busca um serviço mecânico transparente, eficiente
-            e de qualidade.
-            <br/><br/>
-            Nossa equipe é formada por especialistas altamente capacitados,
-            prontos para oferecer diagnósticos precisos, manutenção preventiva e
-            corretiva, além de um atendimento humanizado e personalizado
+            A Admissão Auto Service nasce na capital cearense em 2022 para
+            oferecer um serviço automotivo completo, técnico e humano. À frente
+            do time está Ewerton Honorato, proprietário com mais de 15 anos de
+            experiência no setor automotivo. Essa bagagem traz diagnósticos
+            precisos, processos bem executados e a certeza de que seu carro está
+            em mãos certas.
+            <br />
+            Somos especialistas em todas as marcas, também tendo reconhecimentos
+            como especialistas em Citroën, Peugeot e Renault. Trabalhamos com
+            equipamentos de ponta, peças com procedência, uma equipe motivada e
+            que se atualiza constantemente.
+            <br />
+            Aqui você acompanha cada etapa, recebe fotos, videos e documentos do
+            andamento do serviço, e aprova qualquer serviço antes de ser
+            realizado. Sem surpresas, sem “letra miúda”, com total
+            transparência.
+            <br />
+            Se o seu veículo precisa de manutenção, seja ela preventiva ou
+            corretiva, venha para a Admissão!
           </p>
         </div>
         <div className="flex flex-col h-40 gap-8 w-full">

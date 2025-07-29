@@ -28,7 +28,7 @@ const LocationsSection = ({ id, locations }: LocationsSectionProps) => (
           alt="admissao vector"
           width={420}
           height={206}
-          className="absolute overflow-hidden -left-40 md:-left-60 -top-10"
+          className="absolute z-[-1] overflow-hidden -left-40 md:-left-60 -top-10"
         />
 
         <h2 className="font-sans font-bold text-primary text-xl sm:text-2xl leading-10">

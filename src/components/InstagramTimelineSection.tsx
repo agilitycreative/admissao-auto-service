@@ -15,7 +15,7 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
           alt="admissao vector"
           width={420}
           height={206}
-          className="absolute -left-32 md:-left-60 -top-10"
+          className="absolute z-[-1] -left-32 md:-left-60 -top-10"
         />
         <h2 className="font-extrabold font-sans text-primary text-2xl sm:text-3xl leading-10">
           ACOMPANHE NOSSO INSTAGRAM

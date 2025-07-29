@@ -20,7 +20,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
       alt="admissao vector"
       width={420}
       height={206}
-      className="absolute right-40 top-10 z-50 brightness-200 opacity-100 mix-blend-screen"
+      className="absolute right-40 top-10 z-[-1] brightness-200 opacity-100 mix-blend-screen"
     />
     <div className="max-w-[954px] 2xl:max-w-[1280px] mx-auto ">
       <div className="flex flex-col gap-7">
