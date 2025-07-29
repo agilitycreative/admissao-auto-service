@@ -74,9 +74,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
           />
         </div>
         <div className="z-10 text-primary-contrast flex-col items-start text-start px-6 pb-8">
-          <h1 className="text-xl sm:text-2xl font-extrabold mb-6 text-start">
+          <h4 className="text-xl sm:text-2xl font-extrabold mb-6 text-start">
             Diagnóstico, Análise e <br className="hidden md:block" /> Manutenção
-          </h1>
+          </h4>
           <a
             href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
             target="_blank"
