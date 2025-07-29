@@ -27,6 +27,7 @@ const InstagramTimelineSection = ({ id }: InstagramTimelineSectionProps) => (
           title="Instagram Timeline"
           width="100%"
           height="475"
+          loading="lazy"
           scrolling="no"
           className="w-full h-[475px] 2xl:h-[580px] border-none"
           style={{

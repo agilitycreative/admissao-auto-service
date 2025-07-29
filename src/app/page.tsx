@@ -175,7 +175,7 @@ export default function Home() {
                     href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Arthur+Bernardes,+2116"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer"
+                    className="cursor-pointer py-2"
                   >
                     Av. Presidente Arthur Bernardes, 2116
                   </a> <br></br>
@@ -183,7 +183,7 @@ export default function Home() {
             href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer"
+            className="cursor-pointer py-2"
           >
             +55 85 99609-3955
           </a>
