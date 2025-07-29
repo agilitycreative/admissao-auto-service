@@ -31,6 +31,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
         fill
         className="hidden"
         priority
+        fetchPriority="high"
       />
       {/* Overlay de gradiente escuro */}
       <div className="pointer-events-none absolute inset-0 z-10 w-full h-full" />
