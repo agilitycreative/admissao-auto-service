@@ -36,7 +36,7 @@ const ServiceSteps: React.FC<ServiceStepsProps> = ({ serviceSteps }) => (
           {serviceSteps.map((step, index) => (
             <React.Fragment key={step.id}>
               <div className="flex flex-col items-center gap-3 min-w-[140px] max-w-[150px] w-full">
-                <div className="flex items-center justify-center text-[#393939]">
+                <div className="flex items-center hover:text-white justify-center text-[#393939]">
                   {step.icon}
                 </div>
                 <div className="font-semibold font-sans text-primary-contrast text-[11px] sm:text-xs text-center tracking-wide leading-5">

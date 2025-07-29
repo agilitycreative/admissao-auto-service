@@ -37,9 +37,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
           <p className="font-sans font-normal text-primary tracking-wider text-xs sm:text-sm w-full">
             Na Admissão Auto Service, entendemos que cuidar do seu carro vai
             além da oficina, é também sobre esclarecer dúvidas e orientar com
-            transparência. Por isso, reunimos as perguntas mais frequentes dos
-            nossos clientes para te ajudar a entender melhor os cuidados
-            necessários com o seu veículo.
+            <strong>transparência</strong>. Por isso, reunimos as perguntas mais frequentes dos
+            nossos clientes para te ajudar a entender melhor os <strong>cuidados
+            necessários</strong> com o seu veículo.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full">

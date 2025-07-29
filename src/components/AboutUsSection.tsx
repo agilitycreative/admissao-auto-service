@@ -60,25 +60,22 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
             QUEM SOMOS
           </h2>
           <p className="font-normal font-sans text-primary tracking-wide leading-5 text-xs sm:text-sm">
-            A Admissão Auto Service nasce na capital cearense em 2022 para
-            oferecer um serviço automotivo completo, técnico e humano. À frente
-            do time está Ewerton Honorato, proprietário com mais de 15 anos de
-            experiência no setor automotivo. Essa bagagem traz diagnósticos
-            precisos, processos bem executados e a certeza de que seu carro está
-            em mãos certas.
+            A <strong>Admissão Auto Service</strong> nasceu em Fortaleza em 2022
+            para oferecer um serviço automotivo completo, técnico e humano. À
+            frente está Ewerton Honorato, com mais de{" "}
+            <strong>15 anos de experiência</strong> e foco em diagnósticos
+            precisos e serviços bem executados.
             <br />
-            Somos especialistas em todas as marcas, também tendo reconhecimentos
-            como especialistas em Citroën, Peugeot e Renault. Trabalhamos com
-            equipamentos de ponta, peças com procedência, uma equipe motivada e
-            que se atualiza constantemente.
             <br />
-            Aqui você acompanha cada etapa, recebe fotos, videos e documentos do
-            andamento do serviço, e aprova qualquer serviço antes de ser
-            realizado. Sem surpresas, sem “letra miúda”, com total
-            transparência.
+            <strong>Atendemos todas as marcas</strong>, com destaque para
+            Citroën, Peugeot e Renault. Usamos equipamentos modernos, peças de
+            procedência e temos uma equipe atualizada e comprometida. Você
+            acompanha tudo por fotos, vídeos e documentos, aprovando antes da
+            execução. Transparência total, sem surpresas.
             <br />
-            Se o seu veículo precisa de manutenção, seja ela preventiva ou
-            corretiva, venha para a Admissão!
+            <br />
+            <strong>Manutenção preventiva ou corretiva</strong>? Confie na
+            Admissão Auto Service.
           </p>
         </div>
         <div className="flex flex-col h-40 gap-8 w-full">

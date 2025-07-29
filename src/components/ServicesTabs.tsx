@@ -89,7 +89,7 @@ const ServicesTabs: React.FC<ServicesTabsProps> = ({
               Conheça alguns dos serviços que oferemos aqui na Admissão Auto
               Service. Seja para manutenção preventiva, correções pontuais ou
               aquele check-up antes da viagem, conte com quem trata o seu carro
-              com o mesmo cuidado que você tem.
+              com o mesmo <strong>cuidado</strong> que você tem.
             </p>
           </div>
         </div>

@@ -88,29 +88,29 @@ export default function Home() {
     {
       id: 1,
       title: "Agende sua visita",
-      icon: <FaRegCalendarAlt className="w-7 h-5" />,
+      icon: <FaRegCalendarAlt className="w-10 h-8" />,
     },
     {
       id: 2,
       title: "Análise do Veículo",
-      icon: <FaSearch className="w-7 h-5" />,
+      icon: <FaSearch className="w-10 h-8" />,
     },
     {
       id: 3,
       title: "Entrega do Orçamento",
-      icon: <FaClipboardList className="w-7 h-5" />,
+      icon: <FaClipboardList className="w-10 h-8" />,
     },
     {
       id: 4,
       title: "Realização do Serviços",
       subtitle: "Monitore com vídeos",
-      icon: <FaTools className="w-7 h-5" />,
+      icon: <FaTools className="w-10 h-8" />,
     },
     {
       id: 5,
       title: "Veículo entregue",
       subtitle: "Garantia Admissão",
-      icon: <FaCarSide className="w-7 h-5" />,
+      icon: <FaCarSide className="w-10 h-8" />,
     },
   ];
 
