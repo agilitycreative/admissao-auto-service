@@ -35,12 +35,11 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
             PERGUNTAS FREQUENTES
           </h2>
           <p className="font-sans font-normal text-primary tracking-wider text-xs sm:text-sm w-full">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante.
+            Na Admissão Auto Service, entendemos que cuidar do seu carro vai
+            além da oficina, é também sobre esclarecer dúvidas e orientar com
+            transparência. Por isso, reunimos as perguntas mais frequentes dos
+            nossos clientes para te ajudar a entender melhor os cuidados
+            necessários com o seu veículo.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full">
