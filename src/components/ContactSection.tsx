@@ -93,6 +93,7 @@ const ContactSection = ({ id, contactInfo }: ContactSectionProps) => (
       <div className="relative w-full h-96 sm:h-full">
       
         <iframe
+          title="Admissao Auto Service Maps Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0959953492616!2d-38.47481882439857!3d-3.7892769961845656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74592314bef63%3A0x4ca6480d12f201b1!2sAv.%20Pres.%20Arthur%20Bernardes%2C%202116%20-%20Lagoa%20Sapiranga%20(Coit%C3%A9)%2C%20Fortaleza%20-%20CE%2C%2060833-201!5e0!3m2!1spt-PT!2sbr!4v1753282609023!5m2!1spt-PT!2sbr"
           width="100%"
           height="100%"
