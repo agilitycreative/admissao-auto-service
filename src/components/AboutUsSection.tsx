@@ -87,7 +87,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
               <TbCalendarTime style={{ fontSize: 26 }} />
               <div className="flex flex-col gap-0">
                 <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
-                  16
+                  15
                 </div>
                 <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5">
                   anos de experiência
@@ -98,7 +98,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
               <IoCarSportOutline style={{ fontSize: 23 }} />
               <div className="flex flex-col gap-px">
                 <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
-                  +10
+                  +20
                 </div>
                 <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 whitespace-nowrap">
                   marcas atendidas
@@ -110,7 +110,7 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
             <PiEngineBold style={{ fontSize: 23 }} />
             <div className="flex flex-col">
               <div className="text-shadow-sm font-normal font-sans text-black text-3xl sm:text-4xl tracking-wide leading-5">
-                +1000
+                +700
               </div>
               <div className="pt-2 font-normal font-sans text-primary text-xs sm:text-sm tracking-wide leading-5 whitespace-nowrap">
                 serviços realizados
