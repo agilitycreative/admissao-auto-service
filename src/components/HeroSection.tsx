@@ -108,7 +108,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
                     href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Arthur+Bernardes,+2116"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer"
+                    className="cursor-pointer py-2"
                   >
                     Av. Presidente Arthur Bernardes, 2116
                   </a>
@@ -120,7 +120,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer"
+                    className="cursor-pointer py-2"
                   >
                     +55 85 99609-3955
                   </a>
