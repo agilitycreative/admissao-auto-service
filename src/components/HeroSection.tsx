@@ -86,7 +86,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               <FaRegClock className="w-6 h-6 text-primary-contrast" />
               <div>
                 <h2 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
-                  Horário de funcionamento
+                  Horário de atendimento
                 </h2>
                 <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   Segunda - Sexta
@@ -102,7 +102,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
               <GoHome className="w-6 h-6 text-primary-contrast" />
               <div>
                 <h3 className="font-semibold font-sans text-primary-contrast text-xs sm:text-sm">
-                  Sapiranga
+                  Admissão Sapiranga
                 </h3>
                 <p className="font-normal font-sans text-primary-contrast text-xs sm:text-sm">
                   <a

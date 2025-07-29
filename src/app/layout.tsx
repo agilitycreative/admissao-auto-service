@@ -21,7 +21,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Admissão Auto Service - Oficina Automotiva em Fortaleza",
-  description: "Se você está buscando manutenção e reparos automotivos em Fortaleza, a Admissão Auto Service é a melhor opção. Oferecemos serviços de alta qualidade e preços acessíveis para manter seu veículo em bom estado.",
+  description: "Manutenção e reparos automotivos em Fortaleza com qualidade e preço justo. Conheça a Admissão Auto Service e cuide bem do seu carro!",
   openGraph: {
     title: "Admissão Auto Service - Fortaleza",
     description: "Se você está buscando manutenção e reparos automotivos em Fortaleza, a Admissão Auto Service é a melhor opção. Oferecemos serviços de alta qualidade e preços acessíveis para manter seu veículo em bom estado.",
