@@ -27,7 +27,7 @@ interface FAQSectionProps {
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
-  <section id={id}>
+  <section id={id} className="px-4 lg:px-0">
     <FadeInView className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between max-w-[956px] 2xl:max-w-[1280px] w-full">
       <div className="flex-1 flex flex-col gap-10">
         <div className="flex flex-col gap-2">
@@ -35,12 +35,11 @@ const FAQSection: React.FC<FAQSectionProps> = ({ id, faqItems }) => (
             PERGUNTAS FREQUENTES
           </h2>
           <p className="font-sans font-normal text-primary tracking-wider text-xs sm:text-sm w-full">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante.
+            Na Admissão Auto Service, entendemos que cuidar do seu carro vai
+            além da oficina, é também sobre esclarecer dúvidas e orientar com
+            transparência. Por isso, reunimos as perguntas mais frequentes dos
+            nossos clientes para te ajudar a entender melhor os cuidados
+            necessários com o seu veículo.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full">

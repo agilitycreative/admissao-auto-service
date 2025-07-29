@@ -13,7 +13,7 @@ interface AboutUsSectionProps {
 const AboutUsSection = ({ id }: AboutUsSectionProps) => (
   <section
     id={id}
-    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5"
+    className="flex flex-col w-full max-w-[954px] 2xl:max-w-[1280px] gap-y-16 py-2.5 px-4 lg:px-0"
   >
     <FadeInView className="flex flex-col md:flex-row gap-3 lg:gap-12 2xl:gap-20 w-full">
       <div className="flex flex-col gap-4 w-full md:w-[403px] order-2 md:order-1">
@@ -60,16 +60,15 @@ const AboutUsSection = ({ id }: AboutUsSectionProps) => (
             QUEM SOMOS
           </h2>
           <p className="font-normal font-sans text-primary tracking-wide leading-5 text-xs sm:text-sm">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor
-            ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
-            nibh nibh, at maximus ante.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna.
+            Na Admissão Auto Service, somos movidos pela paixão por carros e
+            pelo compromisso com a satisfação dos nossos clientes. Atuando há
+            mais de 15 anos no mercado automotivo em Fortaleza, conquistamos a
+            confiança de quem busca um serviço mecânico transparente, eficiente
+            e de qualidade.
+            <br/><br/>
+            Nossa equipe é formada por especialistas altamente capacitados,
+            prontos para oferecer diagnósticos precisos, manutenção preventiva e
+            corretiva, além de um atendimento humanizado e personalizado
           </p>
         </div>
         <div className="flex flex-col h-40 gap-8 w-full">
