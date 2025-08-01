@@ -110,7 +110,7 @@ const Frame = (): React.ReactElement => {
               alt="Admissão logo symbol"
               width={207.32}
               height={32}
-              src="/images/logo-marca-white.png"
+              src="/images/logos-admissao/logo-horizontal-white.svg"
             />
           </div>
           {/* Menu burguer só no mobile */}
