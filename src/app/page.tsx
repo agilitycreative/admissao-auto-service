@@ -20,6 +20,7 @@ import {
   WHATSAPP_PHONE,
   WHATSAPP_DEFAULT_MESSAGE,
 } from "@/lib/utils";
+import Head from "next/head";
 
 export default function Home() {
   const partnerLogos = [
@@ -172,13 +173,13 @@ export default function Home() {
       details: (
         <>
           <a
-                    href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Arthur+Bernardes,+2116"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer py-2"
-                  >
-                    Av. Presidente Arthur Bernardes, 2116
-                  </a> <br></br>
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Arthur+Bernardes,+2116"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer py-2"
+          >
+            Av. Presidente Arthur Bernardes, 2116
+          </a> <br></br>
           <a
             href={getWhatsAppLink(WHATSAPP_PHONE, WHATSAPP_DEFAULT_MESSAGE)}
             target="_blank"
@@ -191,32 +192,37 @@ export default function Home() {
       ),
       icon: <LuHouse className="size-6" />,
     },
-    
+
   ];
 
   return (
-    <div className="flex flex-col items-center w-full gap-16 md:gap-20">
-      <Header />
+    <>
+      <Head>
+        <link rel="preload" fetchPriority="high" as="image" href="/images/hero-img.webp" type="image/webp" />
+      </Head>
+      <div className="flex flex-col items-center w-full gap-16 md:gap-20">
+        <Header />
 
-      <HeroSection id="inicio" />
+        <HeroSection id="inicio" />
 
-      <PartnerLogos partnerLogos={partnerLogos} />
+        <PartnerLogos partnerLogos={partnerLogos} />
 
-      <AboutUsSection id="sobre" />
+        <AboutUsSection id="sobre" />
 
-      <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
+        <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
 
-      <ServiceSteps serviceSteps={serviceSteps} />
+        <ServiceSteps serviceSteps={serviceSteps} />
 
-      <InstagramTimelineSection id="instagram" />
+        <InstagramTimelineSection id="instagram" />
 
-      <FAQSection id="faq" faqItems={faqItems} />
+        <FAQSection id="faq" faqItems={faqItems} />
 
-      <div className="w-full">
-        <ContactSection id="localizacao" contactInfo={contactInfo} />
+        <div className="w-full">
+          <ContactSection id="localizacao" contactInfo={contactInfo} />
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
