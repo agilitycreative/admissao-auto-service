@@ -20,7 +20,6 @@ import {
   WHATSAPP_PHONE,
   WHATSAPP_DEFAULT_MESSAGE,
 } from "@/lib/utils";
-import Head from "next/head";
 
 export default function Home() {
   const partnerLogos = [
@@ -196,33 +195,28 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <Head>
-        <link rel="preload" fetchPriority="high" as="image" href="/images/hero-img.webp" type="image/webp" />
-      </Head>
-      <div className="flex flex-col items-center w-full gap-16 md:gap-20">
-        <Header />
+    <div className="flex flex-col items-center w-full gap-16 md:gap-20">
+      <Header />
 
-        <HeroSection id="inicio" />
+      <HeroSection id="inicio" />
 
-        <PartnerLogos partnerLogos={partnerLogos} />
+      <PartnerLogos partnerLogos={partnerLogos} />
 
-        <AboutUsSection id="sobre" />
+      <AboutUsSection id="sobre" />
 
-        <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
+      <ServicesTabs id="servicos" serviceCategories={serviceCategories} />
 
-        <ServiceSteps serviceSteps={serviceSteps} />
+      <ServiceSteps serviceSteps={serviceSteps} />
 
-        <InstagramTimelineSection id="instagram" />
+      <InstagramTimelineSection id="instagram" />
 
-        <FAQSection id="faq" faqItems={faqItems} />
+      <FAQSection id="faq" faqItems={faqItems} />
 
-        <div className="w-full">
-          <ContactSection id="localizacao" contactInfo={contactInfo} />
+      <div className="w-full">
+        <ContactSection id="localizacao" contactInfo={contactInfo} />
 
-          <Footer />
-        </div>
+        <Footer />
       </div>
-    </>
+    </div>
   );
 }

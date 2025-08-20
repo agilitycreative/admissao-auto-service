@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Admissão Auto Service - Fortaleza",
     description: "Se você está buscando manutenção e reparos automotivos em Fortaleza, a Admissão Auto Service é a melhor opção. Oferecemos serviços de alta qualidade e preços acessíveis para manter seu veículo em bom estado.",
     images: [
-      { url: "/images/hero-img.jpeg" },
+      { url: "/images/hero-img.webp" },
     ],
   },
 };
@@ -38,6 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="preload" fetchPriority="high" as="image" href="/images/hero-img.webp" type="image/webp" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} font-sans antialiased`}
       >
