@@ -5,7 +5,7 @@ import { GoHome } from "react-icons/go";
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import FadeInView from "@/components/animations/FadeInView";
 
-import Image from "next/image";
+// import Image from "next/image";
 import {
   getWhatsAppLink,
   WHATSAPP_PHONE,
